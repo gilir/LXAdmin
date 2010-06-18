@@ -1,6 +1,6 @@
 NULL=
 
-SUBDIRS= fontconfig keyboardconf lxcc lxdmconf lxproxy openbox-keyconf screenshot services
+SUBDIRS= lxcc lxdmconf lxfontconfig lxkeyboardconf lxproxy lxscreenshot lxservices openbox-keyconf
 
 AM_CPPFLAGS = \
 	-I$(srcdir) \
