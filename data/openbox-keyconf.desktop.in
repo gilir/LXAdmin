@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Icon=input-keyboard
+Exec=openbox-keyconf
+Terminal=false
+Name=Openbox Keyboard Shortcuts
+Name[de]=Openbox Tastenkombinationen
+Categories=GTK;Settings;HardwareSettings;
+OnlyShowIn=LXDE;
+
