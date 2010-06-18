@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-06-19 00:00+0200\n"
+"POT-Creation-Date: 2010-06-19 00:45+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,12 +16,96 @@ msgstr ""
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 
+#: ../data/lxcc.desktop.in.h:1
+msgid "Control Center"
+msgstr ""
+
+#: ../data/lxcc.desktop.in.h:2
+msgid "Control Center for LXDE"
+msgstr ""
+
+#: ../data/lxcc.desktop.in.h:3
+msgid "LXDE Control Center"
+msgstr ""
+
 #: ../data/lxdmconf.desktop.in.h:1
+msgid "Configure login screen and options"
+msgstr ""
+
+#: ../data/lxdmconf.desktop.in.h:2
+msgid "LXDM configuration"
+msgstr ""
+
+#: ../data/lxdmconf.desktop.in.h:3
 msgid "Login-screen"
 msgstr ""
 
 #: ../data/lxfontconfig.desktop.in.h:1
-msgid "Fontconfiguration"
+msgid "Change Fonts configuration "
+msgstr ""
+
+#: ../data/lxfontconfig.desktop.in.h:2 ../src/lxfontconfig/lxfontconfig.py:330
+msgid "Fontconfig"
+msgstr ""
+
+#: ../data/lxfontconfig.desktop.in.h:3
+msgid "LXFontconfig"
+msgstr ""
+
+#: ../data/lxkeyboard-setup.desktop.in.h:1
+msgid "Define the keyboard layout"
+msgstr ""
+
+#: ../data/lxkeyboard-setup.desktop.in.h:2
+msgid "Keyboard Layout"
+msgstr ""
+
+#: ../data/lxkeyboard-setup.desktop.in.h:3
+msgid "LXKeyboard-setup"
+msgstr ""
+
+#: ../data/lxproxy.desktop.in.h:1
+msgid "Lxproxy"
+msgstr ""
+
+#: ../data/lxproxy.desktop.in.h:2
+msgid "Lxproxy application"
+msgstr ""
+
+#: ../data/lxproxy.desktop.in.h:3
+msgid "Proxy settings"
+msgstr ""
+
+#: ../data/lxscreenshot.desktop.in.h:1
+msgid "LXScreenshot"
+msgstr ""
+
+#: ../data/lxscreenshot.desktop.in.h:2 ../src/lxscreenshot/lxscreenshot.py:134
+msgid "Screenshot"
+msgstr ""
+
+#: ../data/lxscreenshot.desktop.in.h:3
+msgid "Take a screenshot"
+msgstr ""
+
+#: ../data/lxservices.desktop.in.h:1
+msgid "Lxservices"
+msgstr ""
+
+#: ../data/lxservices.desktop.in.h:2 ../src/lxservices/lxservices.py:197
+msgid "Services"
+msgstr ""
+
+#: ../data/lxservices.desktop.in.h:3
+msgid "doubleclick start/stop services "
+msgstr ""
+
+#: ../data/openbox-keyconf.desktop.in.h:1
+msgid "Keyboard Shortcuts"
+msgstr ""
+
+#: ../data/openbox-keyconf.desktop.in.h:2
+msgid "Openbox Keyboard Shortcuts"
 msgstr ""
 
 #: ../src/lxcc/lxcc.py:118
@@ -76,10 +160,6 @@ msgstr ""
 #. Defaultfont wurde angeklickt, erzeugt jetzt Defaultfont-dialog
 #: ../src/lxfontconfig/lxfontconfig.py:280
 msgid "Select Default Font"
-msgstr ""
-
-#: ../src/lxfontconfig/lxfontconfig.py:330
-msgid "Fontconfig"
 msgstr ""
 
 #: ../src/lxfontconfig/lxfontconfig.py:334
@@ -204,16 +284,8 @@ msgstr ""
 msgid "Variant:"
 msgstr ""
 
-#: ../src/lxscreenshot/lxscreenshot.py:134
-msgid "Screenshot"
-msgstr ""
-
 #: ../src/lxscreenshot/lxscreenshot.py:138
 msgid "_Screenshot"
-msgstr ""
-
-#: ../src/lxservices/lxservices.py:197
-msgid "Services"
 msgstr ""
 
 #: ../src/lxservices/lxservices.py:213

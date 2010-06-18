@@ -1,13 +1,10 @@
 [Desktop Entry]
 Version=1.0
-Encoding=UTF-8
 Type=Application
-Exec=screenshot.py
+Exec=lxscreenshot
 Icon=camera
 Terminal=false
-
-Name=Screenshot
-Name[de]=Bildschirmphoto
-Name[ru]=Снимок экрана
-
+_Name=LXScreenshot
+_GenericName=Screenshot
+_Comment=Take a screenshot
 Categories=Application;Graphics;

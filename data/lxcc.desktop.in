@@ -1,11 +1,10 @@
-
 [Desktop Entry]
 Version=1.0
-Encoding=UTF-8
 Type=Application
 Exec=lxcc
 Icon=gtk-preferences
 Terminal=false
-Name=LXDE Control Center
+_Name=LXDE Control Center
+_GenericName=Control Center
+_Comment=Control Center for LXDE
 Categories=Application;System;
-Name[fr_FR]=lxcc.desktop.in

@@ -1,9 +1,10 @@
 [Desktop Entry]
 Type=Application
-_Name=Fontconfiguration
-Name[de]=Schrifteinstellungen
+_Name=LXFontconfig
+_GenericName=Fontconfig
+_Comment=Change Fonts configuration 
 Icon=format-text-bold
-Exec=fontconfig.py
+Exec=lxfontconfig
 StartupNotify=true
 Terminal=false
 Categories=GTK;Settings;HardwareSettings;

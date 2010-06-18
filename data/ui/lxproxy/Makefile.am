@@ -2,16 +2,20 @@ NULL=
 
 # GtkBuilder UI definition files
 uidir=$(datadir)/lxproxy/ui
-ui_in_files= \
+ui_DATA= \
 	AboutLxproxyDialog.ui \
 	LxproxyWindow.ui \
-	PreferencesLxproxyDialog.ui
+	PreferencesLxproxyDialog.ui \
 	$(NULL)
 
-ui_DATA = $(ui_in_files)
+xml_DATA= \
+	about_lxproxy_dialog.xml \
+	lxproxy_window.xml \
+	preferences_lxproxy_dialog.xml
 
 CLEANFILES = \
 	$(ui_DATA) \
+	$(xml_DATA) \
 	$(NULL)
 
 # Purge GtkBuilder UI files
@@ -21,4 +25,5 @@ CLEANFILES = \
 
 EXTRA_DIST= \
 	$(ui_DATA) \
+	$(xml_DATA) \
 	$(NULL)

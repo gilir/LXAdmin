@@ -1,14 +1,11 @@
-
 [Desktop Entry]
 Type=Application
 Icon=input-keyboard
-Exec=keyboardconf
+Exec=lxkeyboardconf
 StartupNotify=true
 Terminal=false
-
-Name=Keyboard layout
-
+_Name=LXKeyboard-setup
+_GenericName=Keyboard Layout
+_Comment=Define the keyboard layout
 Categories=GTK;Settings;HardwareSettings;
 OnlyShowIn=LXDE;
-
-Name[fr_FR]=keyboard-setup.desktop.in

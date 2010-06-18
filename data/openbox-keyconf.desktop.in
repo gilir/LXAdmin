@@ -3,8 +3,8 @@ Type=Application
 Icon=input-keyboard
 Exec=openbox-keyconf
 Terminal=false
-Name=Openbox Keyboard Shortcuts
-Name[de]=Openbox Tastenkombinationen
+_Name=Openbox Keyboard Shortcuts
+_GenericName=Keyboard Shortcuts
+_Comment=Openbox Keyboard Shortcuts
 Categories=GTK;Settings;HardwareSettings;
 OnlyShowIn=LXDE;
-

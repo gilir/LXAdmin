@@ -1,13 +1,11 @@
 [Desktop Entry]
 Version=1.0
-Encoding=UTF-8
-Name=Services
-Comment=doubleclick start/stop services 
+_Name=Lxservices
+_GenericName=Services
+_Comment=doubleclick start/stop services 
 Type=Application
 Exec=su-to-root -X -c "services.py"
 Icon=gtk-execute
 X-GNOME-DocPath=
 Terminal=false
-Name[de]=Dienste start/stop
-Comment[de]=starte/stoppe Dienste durch Doppelklicken
 Categories=Application;System;
