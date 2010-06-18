@@ -1,0 +1,11 @@
+lxdm Login Configuration=lxdm Configurazione Login
+choose Language=Scegli lingua
+Bottom Pane=Pannello inferiore
+autologin=login automatico
+User=Utente
+session=Sessione
+Theme=Tema
+General=Generale
+Themes=Temi
+Background=Sfondo
+Numlock=Numlock

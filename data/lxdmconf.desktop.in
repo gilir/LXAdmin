@@ -1,0 +1,12 @@
+[Desktop Entry]
+Type=Application
+_Name=Login-screen
+Name[de]=Anmeldefenster
+Name[it]=Schermata login
+Name[ru]=ÐÐ°ÑÑ‚Ð¾Ð¹ÐºÐ° lxdm
+Icon=config-users
+Exec=su-to-root -X -c "lxdmconf"
+StartupNotify=true
+Terminal=false
+Categories=GTK;Settings;HardwareSettings;
+OnlyShowIn=LXDE;
