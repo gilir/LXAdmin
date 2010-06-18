@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=Lxproxy
+Name[en]=Proxy Settings
+Name[de]=Proxy Einstellungen
+Comment=Lxproxy application
+Categories=GNOME;Settings;
+Exec=lxproxy
+Icon=/usr/share/lxproxy/media/icon.png
+Terminal=false
+Type=Application
