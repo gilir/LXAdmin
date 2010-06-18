@@ -80,7 +80,7 @@ AC_CONFIG_FILES([
     Makefile
     data/Makefile
     data/ui/Makefile
-    data/ui/media/Makefile
+    data/media/Makefile
     data/ui/lxproxy/Makefile
     po/Makefile.in
     src/Makefile
