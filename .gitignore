@@ -54,3 +54,5 @@ po/.intltool-merge-cache
 po/Makefile.in.in
 po/POTFILES
 po/stamp-it
+src/xml-purge
+src/xml_purge-xml-purge.o
