@@ -2,12 +2,17 @@ NULL=
 
 SUBDIRS=
 
-bin_SCRIPTS = services.py
-
 servicesdir = $(prefix)/bin
 
-DISTCLEANFILES = $(bin_SCRIPTS)         
+DISTCLEANFILES = services.py
+
+install-exec-local:
+	test -e "$(DESTDIR)$(bindir)" || mkdir -p "$(DESTDIR)$(bindir)"
+	$(INSTALL) -m 755 services.py "$(DESTDIR)$(bindir)/services"
+
+uninstall-local:
+	rm -f $(DESTDIR)$(bindir)/services
 
 EXTRA_DIST =  \
-    $(bin_SCRIPTS) \
+    services.py \
 	$(NULL)

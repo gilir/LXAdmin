@@ -2,12 +2,17 @@ NULL=
 
 SUBDIRS=
 
-bin_SCRIPTS = lxcc.py
-
 lxccdir = $(prefix)/bin
 
-DISTCLEANFILES = $(bin_SCRIPTS)         
+DISTCLEANFILES = lxcc.py
+
+install-exec-local:
+	test -e "$(DESTDIR)$(bindir)" || mkdir -p "$(DESTDIR)$(bindir)"
+	$(INSTALL) -m 755 lxcc.py "$(DESTDIR)$(bindir)/lxcc"
+
+uninstall-local:
+	rm -f $(DESTDIR)$(bindir)/lxcc
 
 EXTRA_DIST =  \
-    $(bin_SCRIPTS) \
+    lxcc.py \
 	$(NULL)

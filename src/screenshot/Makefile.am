@@ -2,12 +2,17 @@ NULL=
 
 SUBDIRS=
 
-bin_SCRIPTS = screenshot.py
-
 screenshotdir = $(prefix)/bin
 
-DISTCLEANFILES = $(bin_SCRIPTS)         
+DISTCLEANFILES = screenshot.py
+
+install-exec-local:
+	test -e "$(DESTDIR)$(bindir)" || mkdir -p "$(DESTDIR)$(bindir)"
+	$(INSTALL) -m 755 screenshot.py "$(DESTDIR)$(bindir)/screenshot"
+
+uninstall-local:
+	rm -f $(DESTDIR)$(bindir)/screenshot
 
 EXTRA_DIST =  \
-    $(bin_SCRIPTS) \
+	screenshot.py \
 	$(NULL)

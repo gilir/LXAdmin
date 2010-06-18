@@ -2,12 +2,17 @@ NULL=
 
 SUBDIRS=
 
-bin_SCRIPTS = fontconfig.py
-
 fontconfigdir = $(prefix)/bin
 
-DISTCLEANFILES = $(bin_SCRIPTS)         
+DISTCLEANFILES = fontconfig.py
+
+install-exec-local:
+	test -e "$(DESTDIR)$(bindir)" || mkdir -p "$(DESTDIR)$(bindir)"
+	$(INSTALL) -m 755 fontconfig.py "$(DESTDIR)$(bindir)/fontconfig"
+
+uninstall-local:
+	rm -f $(DESTDIR)$(bindir)/fontconfig
 
 EXTRA_DIST =  \
-    $(bin_SCRIPTS) \
+    fontconfig.py \
 	$(NULL)

@@ -2,12 +2,17 @@ NULL=
 
 SUBDIRS=
 
-bin_SCRIPTS = lxdmconf.py
-
 lxdmconfdir = $(prefix)/bin
 
-DISTCLEANFILES = $(bin_SCRIPTS)         
+DISTCLEANFILES = lxdmconf.py
+
+install-exec-local:
+	test -e "$(DESTDIR)$(bindir)" || mkdir -p "$(DESTDIR)$(bindir)"
+	$(INSTALL) -m 755 lxdmconf.py "$(DESTDIR)$(bindir)/lxdmconf"
+
+uninstall-local:
+	rm -f $(DESTDIR)$(bindir)/lxdmconf
 
 EXTRA_DIST =  \
-    $(bin_SCRIPTS) \
+    lxdmconf.py \
 	$(NULL)

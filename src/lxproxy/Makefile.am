@@ -2,22 +2,27 @@ NULL=
 
 SUBDIRS=
 
-bin_SCRIPTS = lxproxy.py
-
 lxproxydir = $(prefix)/bin
 
-lxproxymoduledir = $(pythondir)/lxadmin
-lxproxymodule_PYTHON =	\
+lxproxymoduledir = $(pkgdatadir)
+lxproxymodule_DATA =	\
 	__init__.py	\
     AboutLxproxyDialog.py \
     lxproxyconfig.py \
     PreferencesLxproxyDialog.py \
 	$(NULL)
 
-DISTCLEANFILES = $(bin_SCRIPTS)         
+DISTCLEANFILES = lxproxy.py
+
+install-exec-local:
+	test -e "$(DESTDIR)$(bindir)" || mkdir -p "$(DESTDIR)$(bindir)"
+	$(INSTALL) -m 755 lxproxy.py "$(DESTDIR)$(bindir)/lxproxy"
+
+uninstall-local:
+	rm -f $(DESTDIR)$(bindir)/lxproxy
 
 EXTRA_DIST =  \
     __init__.py.in \
-    $(bin_SCRIPTS) \
-    $(lxproxy_PYTHON) \
+    lxproxy.py \
+    $(lxproxymodule_DATA) \
 	$(NULL)
