@@ -25,14 +25,17 @@ AC_HEADER_STDC
 # intltool
 IT_PROG_INTLTOOL([0.40.0])
 
+# Python support
+AM_PATH_PYTHON([2.4])
+
 # PKG_CHECK_MODULES(XLIB, "x11")
 # AC_SUBST(XLIB_CFLAGS)
 # AC_SUBST(XLIB_LIBS)
 
-pkg_modules="gtk+-2.0 >= 2.12.0"
-PKG_CHECK_MODULES(GTK, [$pkg_modules])
-AC_SUBST(GTK_CFLAGS)
-AC_SUBST(GTK_LIBS)
+# pkg_modules="gtk+-2.0 >= 2.12.0"
+# PKG_CHECK_MODULES(GTK, [$pkg_modules])
+# AC_SUBST(GTK_CFLAGS)
+# AC_SUBST(GTK_LIBS)
 
 # gio_modules="gthread-2.0 gio-unix-2.0 glib-2.0 >= 2.18.0"
 # PKG_CHECK_MODULES(GIO, [$gio_modules])
@@ -75,11 +78,20 @@ AC_DEFINE_UNQUOTED(GETTEXT_PACKAGE,"$GETTEXT_PACKAGE", [Gettext package.])
 
 AC_CONFIG_FILES([
     Makefile
-    src/Makefile
     data/Makefile
     data/ui/Makefile
-    data/ui/about.glade
+    data/ui/media/Makefile
+    data/ui/lxproxy/Makefile
     po/Makefile.in
+    src/Makefile
+    src/fontconfig/Makefile
+    src/keyboardconf/Makefile
+    src/lxcc/Makefile
+    src/lxdmconf/Makefile
+    src/lxproxy/Makefile
+    src/openbox-keyconf/Makefile
+    src/screenshot/Makefile
+    src/services/Makefile
 ])
 
 AC_OUTPUT
