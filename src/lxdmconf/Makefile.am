@@ -1,0 +1,6 @@
+NULL=
+
+SUBDIRS=
+
+EXTRA_DIST = \
+	$(NULL)
