@@ -1,5 +1,7 @@
 NULL=
 
+SUBDIR= lxproxy
+
 # GtkBuilder UI definition files
 # uidir=$(datadir)/lxadmin/ui
 #ui_in_files= \

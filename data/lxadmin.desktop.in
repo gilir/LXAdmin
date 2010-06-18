@@ -1,9 +1,0 @@
-[Desktop Entry]
-Type=Application
-_Name=LXAdmin
-_GenericName=LXAdmin
-_Comment=LXAdmin Description
-Icon=LXAdmin
-Exec=lxadmin
-StartupNotify=true
-Categories=GTK;
