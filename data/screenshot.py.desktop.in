@@ -1,0 +1,13 @@
+[Desktop Entry]
+Version=1.0
+Encoding=UTF-8
+Type=Application
+Exec=screenshot.py
+Icon=camera
+Terminal=false
+
+Name=Screenshot
+Name[de]=Bildschirmphoto
+Name[ru]=Снимок экрана
+
+Categories=Application;Graphics;
