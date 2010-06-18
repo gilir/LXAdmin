@@ -32,6 +32,8 @@ import gtk
 import pango
 import gc
 
+from gettext import gettext as _
+
 sprachen={}
 sprachen['al']='Albanian'
 sprachen['ar']='Arabic'
@@ -372,7 +374,7 @@ class startmenu:
         window = gtk.Window(gtk.WINDOW_TOPLEVEL)
         self.window=window
         window.set_border_width(5)
-        window.set_title(i18n('DoubleClick Language'))
+        window.set_title(_('DoubleClick Language'))
         window.set_size_request(600,400)
         vbox = gtk.VBox(False, 5)
         window.add(vbox)
@@ -393,9 +395,9 @@ class startmenu:
         self.cellpb.set_property('cell-background','grey80')
         self.cellf.set_property('cell-background', 'grey80')
         self.cell1.set_property('cell-background', 'grey80')
-        self.spalte1 = gtk.TreeViewColumn(i18n('Language'))
-        self.spalte2 = gtk.TreeViewColumn(i18n('Description'))
-        self.spalte3 = gtk.TreeViewColumn(i18n('Variant'))
+        self.spalte1 = gtk.TreeViewColumn(_('Language'))
+        self.spalte2 = gtk.TreeViewColumn(_('Description'))
+        self.spalte3 = gtk.TreeViewColumn(_('Variant'))
         self.treeview.append_column(self.spalte1)
         self.treeview.append_column(self.spalte2)
         self.treeview.append_column(self.spalte3)
@@ -415,7 +417,7 @@ class startmenu:
         sw.set_shadow_type(gtk.SHADOW_ETCHED_IN)
         sw.set_policy(gtk.POLICY_AUTOMATIC, gtk.POLICY_AUTOMATIC)
         sw.add(self.treeview)
-        self.xkeyboard=gtk.CheckButton(i18n("install service:  ~/.config/autostart/xkeyboard"))
+        self.xkeyboard=gtk.CheckButton(_("install service:  ~/.config/autostart/xkeyboard"))
         self.xkeyboard.set_active(True)
         #vbox.pack_start(self.xkeyboard , False,False, 0)
         vbox.pack_start(sw , True, True, 0)
@@ -423,9 +425,9 @@ class startmenu:
 
         hbox=gtk.HBox(False,10)
         hbox2=gtk.HBox(False,10)
-        label4=gtk.Label(i18n("Default:"))
+        label4=gtk.Label(_("Default:"))
         self.combobox = gtk.combo_box_new_text()
-        label5=gtk.Label(i18n("Variant:"))
+        label5=gtk.Label(_("Variant:"))
         self.variant = gtk.combo_box_new_text()
         self.variant.connect('changed', self.variant_changed)
         button1=gtk.Button(stock='gtk-apply')

@@ -94,6 +94,8 @@ import pango
 import gobject
 import gc
 
+from gettext import gettext as _
+
 configfile=".config/openbox/lxde-rc.xml"
 mybuffer=None
 helpwindow=None
@@ -135,7 +137,7 @@ def create_help_view(data=None):
        helpwindow.present()
        return
     helpwindow = gtk.Window(gtk.WINDOW_TOPLEVEL)
-    helpwindow.set_title(i18n('Help: keyboard codes'))
+    helpwindow.set_title(_('Help: keyboard codes'))
     helpwindow.set_size_request(600,400)
     helpwindow.set_position(gtk.WIN_POS_CENTER_ALWAYS)
     helpwindow.connect("destroy", destroy_help_view)
@@ -359,7 +361,7 @@ class Tool:
 
     def add_new_keybinding(self,data=None):
         self.count_list+=1
-        self.liststore.append(['F12','F12','Execute(command='+i18n("NameOfProgram")+',)','add'])     
+        self.liststore.append(['F12','F12','Execute(command='+_("NameOfProgram")+',)','add'])     
 
 
     def delete_keybinding(self,data=None):
@@ -429,7 +431,7 @@ class Tool:
         window.connect("destroy", self.destroy)
     
         # Sets the border width of the window.
-        window.set_title(i18n('openbox keyboard bindings'))
+        window.set_title(_('openbox keyboard bindings'))
         window.set_size_request(400,200)
         window.resize(self.width, self.height)
         window.move(self.pos_x,self.pos_y)
@@ -445,8 +447,8 @@ class Tool:
         self.treeview.connect("button-press-event", self.mouse)
         self.cell1 = gtk.CellRendererText()
         self.cell2 = gtk.CellRendererText()
-        self.spalte1 = gtk.TreeViewColumn(i18n('Key'))
-        self.spalte2 = gtk.TreeViewColumn(i18n('Action'))
+        self.spalte1 = gtk.TreeViewColumn(_('Key'))
+        self.spalte2 = gtk.TreeViewColumn(_('Action'))
         self.treeview.append_column(self.spalte1)
         self.treeview.append_column(self.spalte2)
         self.spalte1.pack_start(self.cell1,True)
@@ -520,7 +522,7 @@ class Tool:
         hbox.pack_start(self.action,True,True,0)
         vbox.pack_start(hbox, False,False, 0)
         self.hbox = gtk.HBox(False, 5)
-        self.cb_exec=gtk.CheckButton(i18n("Edit command")+" =")
+        self.cb_exec=gtk.CheckButton(_("Edit command")+" =")
         self.cb_exec.connect_object("toggled",self.toggle_execute_entry,None)
         self.execute=gtk.Entry(max=0) 
         self.execute.connect("changed",self.execute_entry_changed)

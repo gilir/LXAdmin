@@ -2,17 +2,17 @@ NULL=
 
 SUBDIRS=
 
-keyboardconfdir = $(prefix)/bin
+lxkeyboardconfdir = $(prefix)/bin
 
-DISTCLEANFILES = keyboardconf.py
+DISTCLEANFILES = lxkeyboardconf.py
 
 install-exec-local:
 	test -e "$(DESTDIR)$(bindir)" || mkdir -p "$(DESTDIR)$(bindir)"
-	$(INSTALL) -m 755 keyboardconf.py "$(DESTDIR)$(bindir)/keyboardconf"
+	$(INSTALL) -m 755 lxkeyboardconf.py "$(DESTDIR)$(bindir)/lxkeyboardconf"
 
 uninstall-local:
-	rm -f $(DESTDIR)$(bindir)/keyboardconf
+	rm -f $(DESTDIR)$(bindir)/lxkeyboardconf
 
 EXTRA_DIST =  \
-    keyboardconf.py \
+    lxkeyboardconf.py \
 	$(NULL)

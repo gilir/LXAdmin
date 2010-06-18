@@ -28,7 +28,8 @@ pygtk.require('2.0')
 import gtk
 import codecs
 import gobject
-    
+
+from gettext import gettext as _
 
 DefaultIcon=[
 "16 14 4 1",
@@ -130,11 +131,11 @@ class Simple:
     def __init__(self):
         window = gtk.Window(gtk.WINDOW_TOPLEVEL)
         self.window=window
-        window.set_title(i18n('Screenshot'))
+        window.set_title(_('Screenshot'))
         bbox=gtk.HBox(False,0)
         window.add(bbox)
         window.connect("destroy", self.destroy)
-        self.registerStock('cat-screenshot',i18n('_Screenshot'),DefaultIcon) 
+        self.registerStock('cat-screenshot',_('_Screenshot'),DefaultIcon) 
         button1=gtk.Button(stock='cat-screenshot')
         button2=gtk.Button(stock='gtk-cancel')
         bbox.pack_start(button1,True,True,0)

@@ -31,6 +31,8 @@ import codecs
 import pango
 display=gtk.gdk.display_get_default()
 
+from gettext import gettext as _
+
 
 DefaultIcon=[
 "16 16 4 1",
@@ -275,7 +277,7 @@ class Simple:
 
     def set_font(self,text):
         #Defaultfont wurde angeklickt, erzeugt jetzt Defaultfont-dialog 
-        self.font_dialog=gtk.FontSelectionDialog(i18n('Select Default Font'))
+        self.font_dialog=gtk.FontSelectionDialog(_('Select Default Font'))
         self.font_dialog.set_font_name('Sans 10')
         self.font_dialog.set_position(gtk.WIN_POS_MOUSE)
         self.font_dialog.connect("destroy", self.set_font3)
@@ -325,11 +327,11 @@ class Simple:
         # create a new window
         window = gtk.Window(gtk.WINDOW_TOPLEVEL)
         self.window=window
-        window.set_title(i18n('Fontconfig'))
+        window.set_title(_('Fontconfig'))
         vbox = gtk.VBox(False, 5)
         window.add(vbox)
         hbox=gtk.HBox(False,5)
-        button=gtk.Button(i18n("Defaultfont"))
+        button=gtk.Button(_("Defaultfont"))
         button.connect('clicked',self.set_font)
         hbox.pack_start(button,False,False,0)
         self.font=gtk.Label('')
@@ -338,38 +340,38 @@ class Simple:
         #disabled because there are a Defaultfont chooser in Erscheinungsbild
         #vbox.pack_start(hbox,False,False,0)
 
-        self.anti=gtk.CheckButton(i18n("Antialising"))
+        self.anti=gtk.CheckButton(_("Antialising"))
         self.anti.set_active(True)
         vbox.pack_start(self.anti,False,False,0)
 
-        frame = gtk.Frame(i18n("Hinting"))
+        frame = gtk.Frame(_("Hinting"))
         vbox2=gtk.VBox(False,5)
         vbox2.set_border_width(5)
-        self.autohint=gtk.CheckButton(i18n("Automatic hinting"))
-        self.autohint.set_tooltip_text(i18n("Automatic hinting doesn't work good!"))
+        self.autohint=gtk.CheckButton(_("Automatic hinting"))
+        self.autohint.set_tooltip_text(_("Automatic hinting doesn't work good!"))
         #self.autohint.set_active(True)
         vbox2.pack_start(self.autohint,False,False)
         hbox2=gtk.HBox(False,10)
         vbox2.pack_start(hbox2,False,False)
-        label=gtk.Label(i18n("Style")+':')
+        label=gtk.Label(_("Style")+':')
         hbox2.pack_start(label,False,False)   
         combobox = gtk.combo_box_new_text()
-        combobox.append_text(i18n('none'))
-        combobox.append_text(i18n('slight'))
-        combobox.append_text(i18n('medium'))
-        combobox.append_text(i18n('full'))
+        combobox.append_text(_('none'))
+        combobox.append_text(_('slight'))
+        combobox.append_text(_('medium'))
+        combobox.append_text(_('full'))
         combobox.set_active(3)
-        combobox.set_tooltip_text(i18n("stronger Hinting make fonts sharper"))
+        combobox.set_tooltip_text(_("stronger Hinting make fonts sharper"))
         self.combobox=combobox
         hbox2.pack_start(combobox,False,False)   
         frame.add(vbox2)
         vbox.pack_start(frame,False,False)   
 
-        frame = gtk.Frame(i18n("Sub pixel geometry"))
+        frame = gtk.Frame(_("Sub pixel geometry"))
         vbox3=gtk.VBox(False,5)
 
-        radio=gtk.RadioButton(None,i18n("none"))
-        radio.set_tooltip_text(i18n("don't split a pixel into 3 subpixels (no color artefacts)"))
+        radio=gtk.RadioButton(None,_("none"))
+        radio.set_tooltip_text(_("don't split a pixel into 3 subpixels (no color artefacts)"))
         radio.set_active(True)
         self.radio1=radio 
         vbox3.pack_start(radio,False,False)
@@ -378,8 +380,8 @@ class Simple:
         hbox=gtk.HBox(False,5)
         image=gtk.Image()
         image.set_from_pixbuf(gtk.gdk.pixbuf_new_from_xpm_data(irgb))
-        radio=gtk.RadioButton(self.radio1,i18n("rgb"))       
-        radio.set_tooltip_text(i18n("split a pixel horizontal into 3 subpixels"))
+        radio=gtk.RadioButton(self.radio1,_("rgb"))       
+        radio.set_tooltip_text(_("split a pixel horizontal into 3 subpixels"))
         self.radio2=radio 
         hbox.pack_start(radio,False,False,0)
         hbox.pack_start(image,False,False,0)
@@ -388,8 +390,8 @@ class Simple:
         hbox=gtk.HBox(False,5)
         image=gtk.Image()
         image.set_from_pixbuf(gtk.gdk.pixbuf_new_from_xpm_data(ibgr))
-        radio=gtk.RadioButton(self.radio1,i18n("bgr"))
-        radio.set_tooltip_text(i18n("split a pixel horizontal into 3 subpixels"))
+        radio=gtk.RadioButton(self.radio1,_("bgr"))
+        radio.set_tooltip_text(_("split a pixel horizontal into 3 subpixels"))
         self.radio3=radio 
         hbox.pack_start(radio,False,False,0)
         hbox.pack_start(image,False,False,0)
@@ -398,8 +400,8 @@ class Simple:
         hbox=gtk.HBox(False,5)
         image=gtk.Image()
         image.set_from_pixbuf(gtk.gdk.pixbuf_new_from_xpm_data(ivrgb))
-        radio=gtk.RadioButton(self.radio1,i18n("vrgb"))
-        radio.set_tooltip_text(i18n("split a pixel vertical into 3 subpixels"))
+        radio=gtk.RadioButton(self.radio1,_("vrgb"))
+        radio.set_tooltip_text(_("split a pixel vertical into 3 subpixels"))
         self.radio4=radio 
         hbox.pack_start(radio,False,False,0)
         hbox.pack_start(image,False,False,0)
@@ -408,8 +410,8 @@ class Simple:
         hbox=gtk.HBox(False,5)
         image=gtk.Image()
         image.set_from_pixbuf(gtk.gdk.pixbuf_new_from_xpm_data(ivbgr))
-        radio=gtk.RadioButton(self.radio1,i18n("vbgr"))
-        radio.set_tooltip_text(i18n("split a pixel vertical into 3 subpixels"))
+        radio=gtk.RadioButton(self.radio1,_("vbgr"))
+        radio.set_tooltip_text(_("split a pixel vertical into 3 subpixels"))
         self.radio5=radio 
         hbox.pack_start(radio,False,False,0)
         hbox.pack_start(image,False,False,0)
@@ -418,11 +420,11 @@ class Simple:
         frame.add(vbox3)
         vbox.pack_start(frame,False,False)   
 
-        frame = gtk.Frame(i18n("Screen resolution"))
+        frame = gtk.Frame(_("Screen resolution"))
         vbox4=gtk.VBox(False,5)
         vbox4.set_border_width(5)
         hbox=gtk.HBox(False,5)
-        self.cb_dpi=gtk.CheckButton(i18n("override dpi")+':')
+        self.cb_dpi=gtk.CheckButton(_("override dpi")+':')
         self.cb_dpi.connect_object("toggled",self.toggle_dpi,None)
         self.adj = gtk.Adjustment(96.0, 50.0, 999.0, 1.0, 10.0, 0.0)
         self.spinner = gtk.SpinButton(self.adj, 0, 0)
@@ -433,7 +435,7 @@ class Simple:
         frame.add(vbox4)
         vbox.pack_start(frame,False,False)   
 
-        frame = gtk.Frame(i18n("Save"))
+        frame = gtk.Frame(_("Save"))
         hbox=gtk.HBox(False,5) 
         hbox.set_border_width(5)       
         button1=gtk.Button(stock='gtk-apply')

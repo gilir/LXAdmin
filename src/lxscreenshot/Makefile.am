@@ -2,17 +2,17 @@ NULL=
 
 SUBDIRS=
 
-screenshotdir = $(prefix)/bin
+lxscreenshotdir = $(prefix)/bin
 
-DISTCLEANFILES = screenshot.py
+DISTCLEANFILES = lxscreenshot.py
 
 install-exec-local:
 	test -e "$(DESTDIR)$(bindir)" || mkdir -p "$(DESTDIR)$(bindir)"
-	$(INSTALL) -m 755 screenshot.py "$(DESTDIR)$(bindir)/screenshot"
+	$(INSTALL) -m 755 lxscreenshot.py "$(DESTDIR)$(bindir)/lxscreenshot"
 
 uninstall-local:
-	rm -f $(DESTDIR)$(bindir)/screenshot
+	rm -f $(DESTDIR)$(bindir)/lxscreenshot
 
 EXTRA_DIST =  \
-	screenshot.py \
+	lxscreenshot.py \
 	$(NULL)

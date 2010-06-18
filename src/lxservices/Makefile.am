@@ -2,17 +2,17 @@ NULL=
 
 SUBDIRS=
 
-servicesdir = $(prefix)/bin
+lxservicesdir = $(prefix)/bin
 
-DISTCLEANFILES = services.py
+DISTCLEANFILES = lxservices.py
 
 install-exec-local:
 	test -e "$(DESTDIR)$(bindir)" || mkdir -p "$(DESTDIR)$(bindir)"
-	$(INSTALL) -m 755 services.py "$(DESTDIR)$(bindir)/services"
+	$(INSTALL) -m 755 lxservices.py "$(DESTDIR)$(bindir)/lxservices"
 
 uninstall-local:
-	rm -f $(DESTDIR)$(bindir)/services
+	rm -f $(DESTDIR)$(bindir)/lxservices
 
 EXTRA_DIST =  \
-    services.py \
+    lxservices.py \
 	$(NULL)

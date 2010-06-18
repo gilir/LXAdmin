@@ -85,14 +85,14 @@ AC_CONFIG_FILES([
     data/ui/lxproxy/Makefile
     po/Makefile.in
     src/Makefile
-    src/fontconfig/Makefile
-    src/keyboardconf/Makefile
     src/lxcc/Makefile
     src/lxdmconf/Makefile
+    src/lxfontconfig/Makefile
+    src/lxkeyboardconf/Makefile
     src/lxproxy/Makefile
+    src/lxscreenshot/Makefile
+    src/lxservices/Makefile
     src/openbox-keyconf/Makefile
-    src/screenshot/Makefile
-    src/services/Makefile
 ])
 
 AC_OUTPUT

@@ -32,6 +32,8 @@ import gtk
 import pango
 import gc
 
+from gettext import gettext as _
+
 I18N={}
 
 def i18n(text):
@@ -428,17 +430,17 @@ class Tool:
         window.connect("destroy", self.destroy)
     
         # Sets the border width of the window.
-        window.set_title(i18n('lxdm Login Configuration'))
+        window.set_title(_('lxdm Login Configuration'))
         window.set_size_request(400,200)
         window.resize(self.width, self.height)
         window.move(self.pos_x,self.pos_y)
 
         vbox2=gtk.VBox(False,0)
-        self.cb_numlock=gtk.CheckButton(i18n("Numlock"))
-        self.cb_lang=gtk.CheckButton(i18n("choose Language"))
-        self.cb_bottom=gtk.CheckButton(i18n("Bottom Pane"))
-        self.cb_autologin=gtk.CheckButton(i18n("autologin") + '       ')
-        label1=gtk.Label(i18n("User") + ':')
+        self.cb_numlock=gtk.CheckButton(_("Numlock"))
+        self.cb_lang=gtk.CheckButton(_("choose Language"))
+        self.cb_bottom=gtk.CheckButton(_("Bottom Pane"))
+        self.cb_autologin=gtk.CheckButton(_("autologin") + '       ')
+        label1=gtk.Label(_("User") + ':')
         label1spacer=gtk.Label("     ")
         self.entryuser=gtk.Entry(max=0)
         hbox2 = gtk.HBox(False, 0)
@@ -451,7 +453,7 @@ class Tool:
         vbox2.pack_start(self.cb_bottom,False,False,0)
         vbox2.pack_start(hbox2,False,False,0)
         hbox3 = gtk.HBox(False, 0)
-        self.cb_session=gtk.CheckButton(i18n("session") + ':')
+        self.cb_session=gtk.CheckButton(_("session") + ':')
         labelhspacer=gtk.Label(' ')
         label2spacer=gtk.Label(" ")
         self.entrysession=gtk.Entry(max=0)
@@ -466,8 +468,8 @@ class Tool:
         hbox5 = gtk.HBox(False, 0)
         hbox4 = gtk.HBox(False, 0)
         vbox4 = gtk.VBox(False, 0)
-        labeltext=i18n('Theme')
-        label2=gtk.Label(i18n('Background')+':')
+        labeltext=_('Theme')
+        label2=gtk.Label(_('Background')+':')
         label12=gtk.Label('  GTK2-'+labeltext+':')
         label13=gtk.Label(labeltext+':')
         self.comboboxGTK = gtk.combo_box_new_text()
@@ -498,8 +500,8 @@ class Tool:
  
         notebook = gtk.Notebook()
         notebook.set_tab_pos(gtk.POS_TOP)
-        tab_label1=gtk.Label(i18n('General'))
-        tab_label2=gtk.Label(i18n('Themes'))
+        tab_label1=gtk.Label(_('General'))
+        tab_label2=gtk.Label(_('Themes'))
         notebook.append_page(vbox2,tab_label1) 
         notebook.append_page(vbox4,tab_label2) 
 

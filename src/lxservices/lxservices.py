@@ -31,6 +31,8 @@ pygtk.require('2.0')
 import gtk
 import pango
 
+from gettext import gettext as _
+
 rot=[
 "16 16 4 1",
 ". c #000000",
@@ -192,7 +194,7 @@ class startmenu:
     def __init__(self):
         window = gtk.Window(gtk.WINDOW_TOPLEVEL)
         self.window=window
-        window.set_title(i18n('Services')+' "/etc/init.d"')
+        window.set_title(_('Services')+' "/etc/init.d"')
         window.set_size_request(600,400)
         vbox = gtk.VBox(False, 10)
         window.add(vbox)
@@ -208,8 +210,8 @@ class startmenu:
         self.cell2 = gtk.CellRendererText()
         self.cellpb.set_property('cell-background', 'grey80')
         self.cell1.set_property('cell-background', 'grey80')
-        self.spalte1 = gtk.TreeViewColumn(i18n('Service'))
-        self.spalte2 = gtk.TreeViewColumn(i18n('Description'))
+        self.spalte1 = gtk.TreeViewColumn(_('Service'))
+        self.spalte2 = gtk.TreeViewColumn(_('Description'))
         self.treeview.append_column(self.spalte1)
         self.treeview.append_column(self.spalte2)
         self.spalte1.pack_start(self.cellpb,False)

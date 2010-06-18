@@ -54,6 +54,8 @@ import gtk
 import codecs
 import pango
 
+from gettext import gettext as _
+
 I18N={}
 
 def i18n(text):
@@ -113,7 +115,7 @@ class Simple:
         # create a new window
         window = gtk.Window(gtk.WINDOW_TOPLEVEL)
         self.window=window
-        window.set_title(i18n('LXDE-Control-Center'))
+        window.set_title(_('LXDE-Control-Center'))
         window.connect("destroy", self.destroy)
         window.set_border_width(3)
         window.set_position(gtk.WIN_POS_CENTER_ALWAYS)

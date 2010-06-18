@@ -1,5 +1,18 @@
 # List of source files containing translatable strings.
 
-data/template.desktop.in
-data/ui/about.glade.in
-src/template.c
+data/lxcc.desktop.in
+data/lxdmconf.desktop.in
+data/lxfontconfig.desktop.in
+data/lxkeyboard-setup.desktop.in
+data/lxproxy.desktop.in
+data/lxscreenshot.desktop.in
+data/lxservices.desktop.in
+data/openbox-keyconf.desktop.in
+
+src/lxcc/lxcc.py
+src/lxdmconf/lxdmconf.py
+src/lxfontconfig/lxfontconfig.py
+src/lxkeyboardconf/lxkeyboardconf.py
+src/lxscreenshot/lxscreenshot.py
+src/lxservices/lxservices.py
+src/openbox-keyconf/openbox-keyconf.py
