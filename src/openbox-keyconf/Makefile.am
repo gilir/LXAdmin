@@ -4,7 +4,7 @@ SUBDIRS=
 
 bin_SCRIPTS = openbox-keyconf.py
 
-openbox-keyconfdir = $(prefix)/bin
+openboxkeyconfdir = $(prefix)/bin
 
 DISTCLEANFILES = $(bin_SCRIPTS)         
 

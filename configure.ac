@@ -32,10 +32,11 @@ AM_PATH_PYTHON([2.4])
 # AC_SUBST(XLIB_CFLAGS)
 # AC_SUBST(XLIB_LIBS)
 
-# pkg_modules="gtk+-2.0 >= 2.12.0"
-# PKG_CHECK_MODULES(GTK, [$pkg_modules])
-# AC_SUBST(GTK_CFLAGS)
-# AC_SUBST(GTK_LIBS)
+#Support for xml-purge.c
+pkg_modules="gtk+-2.0 >= 2.12.0"
+PKG_CHECK_MODULES(GTK, [$pkg_modules])
+AC_SUBST(GTK_CFLAGS)
+AC_SUBST(GTK_LIBS)
 
 # gio_modules="gthread-2.0 gio-unix-2.0 glib-2.0 >= 2.18.0"
 # PKG_CHECK_MODULES(GIO, [$gio_modules])
