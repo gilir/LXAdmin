@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+_Name=Fontconfiguration
+Name[de]=Schrifteinstellungen
+Icon=format-text-bold
+Exec=fontconfig.py
+StartupNotify=true
+Terminal=false
+Categories=GTK;Settings;HardwareSettings;
+OnlyShowIn=LXDE;
