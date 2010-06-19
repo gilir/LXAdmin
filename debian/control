@@ -12,17 +12,27 @@ Homepage: http://launchpad.net/lxadmin
 Vcs-Git: git://git.debian.org/git/collab-maint/lxadmin.git
 Vcs-Browser: http://git.debian.org/?p=collab-maint/lxadmin.git;a=summary
 
-Package: lxdmconf
+Package: lxadmin
 Architecture: any
 Depends: ${shlibs:Depends},
          ${misc:Depends},
          ${python:Depends}
+Description: common files for lxadmin utilities
+ lxadmin are common files for lxadmin utilities.
+
+Package: lxdmconf
+Architecture: any
+Depends: lxadmin (= ${binary:Version}),
+         ${shlibs:Depends},
+         ${misc:Depends},
+         ${python:Depends},
 Description: utility to change lxdm options
  lxdmconf is an utility to change login options in LXDE when using LXDM.
  
 Package: lxproxy
 Architecture: any
-Depends: ${shlibs:Depends},
+Depends: lxadmin (= ${binary:Version}),
+         ${shlibs:Depends},
          ${misc:Depends},
          ${python:Depends}
 Description: utility to change proxy options
