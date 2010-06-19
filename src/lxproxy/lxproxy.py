@@ -22,6 +22,12 @@ from user import home
 
 import lxadmin.defs as defs
 
+import gettext
+
+gettext.bindtextdomain('lxadmin', defs.LOCALE_DIR)
+gettext.textdomain('lxadmin')
+_ = gettext.gettext
+
 # Check if we are working in the source tree or from the installed 
 # package and mangle the python path accordingly
 if os.path.dirname(sys.argv[0]) != ".":

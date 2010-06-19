@@ -17,7 +17,16 @@ src/lxscreenshot/lxscreenshot.py
 src/lxservices/lxservices.py
 src/openbox-keyconf/openbox-keyconf.py
 
-data/ui/lxproxy/LxproxyWindow.ui
-data/ui/lxproxy/AboutLxproxyDialog.ui
-data/ui/lxproxy/PreferencesLxproxyDialog.ui
-
+src/lxproxy/LxproxyWindow.ui
+src/lxproxy/AboutLxproxyDialog.ui
+src/lxproxy/PreferencesLxproxyDialog.ui
+src/lxproxy/about_lxproxy_dialog.xml
+src/lxproxy/AboutLxproxyDialog.py
+src/lxproxy/AboutLxproxyDialog.ui
+src/lxproxy/lxproxy.py
+src/lxproxy/lxproxyconfig.py
+src/lxproxy/lxproxy_window.xml
+src/lxproxy/LxproxyWindow.ui
+src/lxproxy/preferences_lxproxy_dialog.xml
+src/lxproxy/PreferencesLxproxyDialog.py
+src/lxproxy/PreferencesLxproxyDialog.ui
