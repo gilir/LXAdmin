@@ -113,12 +113,12 @@ def NewPreferencesLxproxyDialog():
     """
 
     #look for the ui file that describes the ui
-    ui_filename = os.path.join(getdatapath(), 'ui', 'lxproxy', 'PreferencesLxproxyDialog.ui')
-    if not os.path.exists(ui_filename):
-        ui_filename = None
+    #ui_filename = os.path.join(os.curdir(),'PreferencesLxproxyDialog.ui')
+    #if not os.path.exists(ui_filename):
+    #    ui_filename = None
 
     builder = gtk.Builder()
-    builder.add_from_file(ui_filename)
+    builder.add_from_file(getdatapath('LxproxyWindow.ui'))
     dialog = builder.get_object("preferences_lxproxy_dialog")
     dialog.finish_initializing(builder)
     return dialog

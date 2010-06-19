@@ -1,1 +1,5 @@
 usr/bin/lxproxy
+usr/share/applications/lxproxy.desktop
+usr/share/lxadmin/lxproxy/*.py
+usr/share/lxadmin/lxproxy/*.ui
+usr/share/lxadmin/lxproxy/*.xml

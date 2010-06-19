@@ -1,2 +1,4 @@
 usr/lib/python2.*/*-packages/lxadmin/*.py
 usr/share/locale/
+usr/share/lxadmin/icons/*.png
+usr/share/lxadmin/icons/*.svg

@@ -6,10 +6,11 @@ lxproxydir = $(prefix)/bin
 
 lxproxymoduledir = $(pkgdatadir)/lxproxy
 lxproxymodule_DATA =	\
-	__init__.py	\
     AboutLxproxyDialog.py \
     lxproxyconfig.py \
     PreferencesLxproxyDialog.py \
+	$(wildcard *.xml)		\
+	$(wildcard *.ui)		\
 	$(NULL)
 
 install-exec-local:
@@ -20,7 +21,6 @@ uninstall-local:
 	rm -f $(DESTDIR)$(bindir)/lxproxy
 
 EXTRA_DIST =  \
-    __init__.py.in \
     lxproxy.py \
     $(lxproxymodule_DATA) \
 	$(NULL)

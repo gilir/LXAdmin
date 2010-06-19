@@ -96,7 +96,6 @@ AC_CONFIG_FILES([
     data/Makefile
     data/ui/Makefile
     data/media/Makefile
-    data/ui/lxproxy/Makefile
     po/Makefile.in
     src/Makefile
     src/common/defs.py

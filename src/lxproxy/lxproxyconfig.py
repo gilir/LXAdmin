@@ -26,26 +26,33 @@ __lxproxy_data_directory__ = '../../data/'
 
 import os
 
+import lxadmin.defs as defs
+
 class project_path_not_found(Exception):
     pass
 
-def getdatapath():
+def getdatapath(ui):
     """Retrieve lxproxy data path
 
     This path is by default <lxproxy_lib_path>/../data/ in trunk
     and /usr/share/lxproxy in an installed version but this path
     is specified at installation time.
     """
+    
+    ui_path = os.path.join(os.getcwd(),ui)
+    if not os.path.exists(ui_path):
+        ui_path = os.path.join(defs.SHARED_DATA_DIR,"lxproxy",ui)
+    return ui_path
 
     # get pathname absolute or relative
-    if __lxproxy_data_directory__.startswith('/'):
-        pathname = __lxproxy_data_directory__
-    else:
-        pathname = os.path.dirname(__file__) + '/' + __lxproxy_data_directory__
+    #if __lxproxy_data_directory__.startswith('/'):
+    #    pathname = __lxproxy_data_directory__
+    #else:
+    #    pathname = os.path.dirname(__file__) + '/' + __lxproxy_data_directory__
 
-    abs_data_path = os.path.abspath(pathname)
-    if os.path.exists(abs_data_path):
-        return abs_data_path
-    else:
-        raise project_path_not_found
+    #abs_data_path = os.path.abspath(pathname)
+    #if os.path.exists(abs_data_path):
+    #    return abs_data_path
+    #else:
+    #    raise project_path_not_found
 

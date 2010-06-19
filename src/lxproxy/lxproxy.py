@@ -20,11 +20,14 @@ import os
 import gtk
 from user import home
 
+import lxadmin.defs as defs
+
 # Check if we are working in the source tree or from the installed 
 # package and mangle the python path accordingly
 if os.path.dirname(sys.argv[0]) != ".":
     if sys.argv[0][0] == "/":
         fullPath = os.path.dirname(sys.argv[0])
+        sys.path.insert(0, os.path.join(defs.SHARED_DATA_DIR,"lxproxy"))
     else:
         fullPath = os.getcwd() + "/" + os.path.dirname(sys.argv[0])
 else:
@@ -235,13 +238,12 @@ def NewLxproxyWindow():
     """
 
     #look for the ui file that describes the ui
-    ui_filename = os.path.join(getdatapath(), 'ui', 'lxproxy', 'LxproxyWindow.ui')
-    if not os.path.exists(ui_filename):
-        ui_filename = None
-
-    print ('1',ui_filename)
+    #ui_filename = os.path.join(getdatapath(), 'ui', 'lxproxy', 'LxproxyWindow.ui')
+    #if not os.path.exists(ui_filename):
+    #    ui_filename = None
+	#
     builder = gtk.Builder()
-    builder.add_from_file(ui_filename)
+    builder.add_from_file(getdatapath('LxproxyWindow.ui'))
     window = builder.get_object("lxproxy_window")
     window.finish_initializing(builder)
     return window

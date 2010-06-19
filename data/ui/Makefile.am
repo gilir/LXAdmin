@@ -1,23 +1,13 @@
 NULL=
 
-SUBDIR= lxproxy
+SUBDIRS=
 
-# GtkBuilder UI definition files
-# uidir=$(datadir)/lxadmin/ui
-#ui_in_files= \
-#	about.glade \
-#	$(NULL)
-# ui_DATA = $(ui_in_files:.glade=.ui)
-#
-# CLEANFILES = \
-#	$(ui_DATA) \
-#	$(NULL)
+ui_xmldir = $(pkgdatadir)/lxproxy
+ui_xml_DATA = 		\
+	$(wildcard *.xml)		\
+	$(wildcard *.ui)		\
+	$(NULL)
 
-# Purge GtkBuilder UI files
-# %.ui: %.glade
-#	cp $< $@
-#	$(top_srcdir)/src/xml-purge $@
-
-# EXTRA_DIST= \
-#	$(ui_DATA) \
-#	$(NULL)
+EXTRA_DIST = \
+	$(ui_xml_DATA) \
+	$(NULL)
