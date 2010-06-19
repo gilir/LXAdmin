@@ -4,8 +4,6 @@ SUBDIRS=
 
 lxscreenshotdir = $(prefix)/bin
 
-DISTCLEANFILES = lxscreenshot.py
-
 install-exec-local:
 	test -e "$(DESTDIR)$(bindir)" || mkdir -p "$(DESTDIR)$(bindir)"
 	$(INSTALL) -m 755 lxscreenshot.py "$(DESTDIR)$(bindir)/lxscreenshot"

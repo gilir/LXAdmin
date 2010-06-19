@@ -4,8 +4,6 @@ SUBDIRS=
 
 lxdmconfdir = $(prefix)/bin
 
-DISTCLEANFILES = lxdmconf.py
-
 install-exec-local:
 	test -e "$(DESTDIR)$(bindir)" || mkdir -p "$(DESTDIR)$(bindir)"
 	$(INSTALL) -m 755 lxdmconf.py "$(DESTDIR)$(bindir)/lxdmconf"

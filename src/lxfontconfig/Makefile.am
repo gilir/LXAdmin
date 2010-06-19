@@ -4,8 +4,6 @@ SUBDIRS=
 
 fontconfigdir = $(prefix)/bin
 
-DISTCLEANFILES = lxfontconfig.py
-
 install-exec-local:
 	test -e "$(DESTDIR)$(bindir)" || mkdir -p "$(DESTDIR)$(bindir)"
 	$(INSTALL) -m 755 lxfontconfig.py "$(DESTDIR)$(bindir)/lxfontconfig"

@@ -12,8 +12,6 @@ lxproxymodule_DATA =	\
     PreferencesLxproxyDialog.py \
 	$(NULL)
 
-DISTCLEANFILES = lxproxy.py
-
 install-exec-local:
 	test -e "$(DESTDIR)$(bindir)" || mkdir -p "$(DESTDIR)$(bindir)"
 	$(INSTALL) -m 755 lxproxy.py "$(DESTDIR)$(bindir)/lxproxy"
