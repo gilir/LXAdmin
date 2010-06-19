@@ -2,11 +2,11 @@ SUBDIRS =
 
 commondir = $(pythondir)/lxadmin
 common_PYTHON = \
+	detect_os.py \
 	defs.py
 	
 CLEANFILES = \
-	defs.py \
-	$(BUILT_SOURCES)
+	defs.py
 	
 DISTCLEANFILES = \
 	$(CLEANFILES)
