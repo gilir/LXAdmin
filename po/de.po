@@ -1,0 +1,379 @@
+# German translations for lxadmin package.
+# Copyright (C) 2010 THE lxadmin'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the lxadmin package.
+# Julien Lavergne <gilir@ubuntu.com>, 2010.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: lxadmin 0.1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2010-06-20 00:48+0200\n"
+"PO-Revision-Date: 2010-06-20 00:39+0200\n"
+"Last-Translator: Julien Lavergne <gilir@ubuntu.com>\n"
+"Language-Team: German\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../data/lxcc.desktop.in.h:1
+msgid "Control Center"
+msgstr ""
+
+#: ../data/lxcc.desktop.in.h:2
+msgid "Control Center for LXDE"
+msgstr ""
+
+#: ../data/lxcc.desktop.in.h:3
+msgid "LXDE Control Center"
+msgstr "LXDE Kontroll Zentrum"
+
+#: ../data/lxdmconf.desktop.in.h:1
+msgid "Configure login screen and options"
+msgstr ""
+
+#: ../data/lxdmconf.desktop.in.h:2
+msgid "LXDM configuration"
+msgstr ""
+
+#: ../data/lxdmconf.desktop.in.h:3
+msgid "Login-screen"
+msgstr "Anmeldefenster"
+
+#: ../data/lxfontconfig.desktop.in.h:1
+msgid "Change Fonts configuration "
+msgstr ""
+
+#: ../data/lxfontconfig.desktop.in.h:2 ../src/lxfontconfig/lxfontconfig.py:330
+msgid "Fontconfig"
+msgstr "Schriftconfiguration"
+
+#: ../data/lxfontconfig.desktop.in.h:3
+msgid "LXFontconfig"
+msgstr ""
+
+#: ../data/lxkeyboard-setup.desktop.in.h:1
+msgid "Define the keyboard layout"
+msgstr ""
+
+#: ../data/lxkeyboard-setup.desktop.in.h:2 ../src/lxcc/lxcc.py:30
+msgid "Keyboard Layout"
+msgstr "Tastaturlayout"
+
+#: ../data/lxkeyboard-setup.desktop.in.h:3
+msgid "LXKeyboard-setup"
+msgstr ""
+
+#: ../data/lxproxy.desktop.in.h:1
+msgid "Lxproxy"
+msgstr ""
+
+#: ../data/lxproxy.desktop.in.h:2
+msgid "Lxproxy application"
+msgstr ""
+
+#: ../data/lxproxy.desktop.in.h:3
+msgid "Proxy settings"
+msgstr ""
+
+#: ../data/lxscreenshot.desktop.in.h:1
+msgid "LXScreenshot"
+msgstr ""
+
+#: ../data/lxscreenshot.desktop.in.h:2 ../src/lxscreenshot/lxscreenshot.py:134
+msgid "Screenshot"
+msgstr "Bildschirmphoto"
+
+#: ../data/lxscreenshot.desktop.in.h:3
+msgid "Take a screenshot"
+msgstr ""
+
+#: ../data/lxservices.desktop.in.h:1
+msgid "Lxservices"
+msgstr ""
+
+#: ../data/lxservices.desktop.in.h:2 ../src/lxservices/lxservices.py:197
+msgid "Services"
+msgstr "Dienste"
+
+#: ../data/lxservices.desktop.in.h:3
+msgid "doubleclick start/stop services "
+msgstr ""
+
+#: ../data/openbox-keyconf.desktop.in.h:1
+msgid "Keyboard Shortcuts"
+msgstr ""
+
+#: ../data/openbox-keyconf.desktop.in.h:2 ../src/lxcc/lxcc.py:29
+msgid "Openbox Keyboard Shortcuts"
+msgstr "Openbox Tastenkombinationen"
+
+#: ../src/lxcc/lxcc.py:26
+#, fuzzy
+msgid "Login Screen"
+msgstr "Anmeldefenster"
+
+#: ../src/lxcc/lxcc.py:27
+msgid "Configure Openbox"
+msgstr "Openbox Konfiguration"
+
+#: ../src/lxcc/lxcc.py:28
+msgid "Preferred Applications"
+msgstr "Bevorzugte Anwendungen"
+
+#: ../src/lxcc/lxcc.py:31
+msgid "Mouse&Keyboard"
+msgstr "Maus&Tastatur"
+
+#: ../src/lxcc/lxcc.py:32
+msgid "Set Wallpaper"
+msgstr "Desktop Hintergrundbild"
+
+#: ../src/lxcc/lxcc.py:33
+msgid "Screensaver Settings"
+msgstr "Bildschirmschoner"
+
+#: ../src/lxcc/lxcc.py:34
+msgid "Appearance"
+msgstr "Erscheinungsbild"
+
+#: ../src/lxcc/lxcc.py:35
+msgid "configure Fonts"
+msgstr "Schriftkonfiguration"
+
+#: ../src/lxcc/lxcc.py:36
+msgid "PCManFM Settings"
+msgstr "PCManFM Einstellungen"
+
+#: ../src/lxcc/lxcc.py:37
+msgid "PCManFM Superuser Mode"
+msgstr "PCManFM Superuser Modus"
+
+#: ../src/lxcc/lxcc.py:38
+msgid "Refresh Panel"
+msgstr "Panel neu starten"
+
+#: ../src/lxcc/lxcc.py:39
+msgid "Search Software"
+msgstr "Suche Software"
+
+#: ../src/lxcc/lxcc.py:40
+msgid "Session Settings"
+msgstr "Sitzungseinstellungen"
+
+#: ../src/lxcc/lxcc.py:41
+msgid "Monitor Settings"
+msgstr "Monitoreinstellungen"
+
+#: ../src/lxcc/lxcc.py:118
+msgid "LXDE-Control-Center"
+msgstr "LXDE Kontroll Zentrum"
+
+#: ../src/lxdmconf/lxdmconf.py:178
+msgid "ERROR: lxdmconf is not launched as root"
+msgstr ""
+
+#. Sets the border width of the window.
+#: ../src/lxdmconf/lxdmconf.py:423
+msgid "lxdm Login Configuration"
+msgstr "lxdm Einloggen Konfiguration"
+
+#: ../src/lxdmconf/lxdmconf.py:429
+msgid "Numlock"
+msgstr "Numlock(Ziffernblock)"
+
+#: ../src/lxdmconf/lxdmconf.py:430
+msgid "choose Language"
+msgstr "Sprachauswahl"
+
+#: ../src/lxdmconf/lxdmconf.py:431
+msgid "Bottom Pane"
+msgstr "Untere Leiste"
+
+#: ../src/lxdmconf/lxdmconf.py:432
+msgid "autologin"
+msgstr "automatisch einloggen"
+
+#: ../src/lxdmconf/lxdmconf.py:433
+msgid "User"
+msgstr "Benutzer"
+
+#: ../src/lxdmconf/lxdmconf.py:446
+msgid "session"
+msgstr "Sitzung"
+
+#: ../src/lxdmconf/lxdmconf.py:461
+msgid "Theme"
+msgstr "Theme"
+
+#: ../src/lxdmconf/lxdmconf.py:462
+msgid "Background"
+msgstr "Hintergrund"
+
+#: ../src/lxdmconf/lxdmconf.py:493
+msgid "General"
+msgstr "Standardoptionen"
+
+#: ../src/lxdmconf/lxdmconf.py:494
+msgid "Themes"
+msgstr "Themes"
+
+#. Defaultfont wurde angeklickt, erzeugt jetzt Defaultfont-dialog
+#: ../src/lxfontconfig/lxfontconfig.py:280
+msgid "Select Default Font"
+msgstr "WÃ¤hle Default Schrift"
+
+#: ../src/lxfontconfig/lxfontconfig.py:334
+msgid "Defaultfont"
+msgstr "Defaultschrift"
+
+#. disabled because there are a Defaultfont chooser in Erscheinungsbild
+#. vbox.pack_start(hbox,False,False,0)
+#: ../src/lxfontconfig/lxfontconfig.py:343
+msgid "Antialising"
+msgstr "Antialising"
+
+#: ../src/lxfontconfig/lxfontconfig.py:347
+msgid "Hinting"
+msgstr "Hinting"
+
+#: ../src/lxfontconfig/lxfontconfig.py:350
+msgid "Automatic hinting"
+msgstr "Automatisches Hinting"
+
+#: ../src/lxfontconfig/lxfontconfig.py:351
+msgid "Automatic hinting doesn't work good!"
+msgstr "Automatisches Hinting funktioniert nicht gut!"
+
+#: ../src/lxfontconfig/lxfontconfig.py:356
+msgid "Style"
+msgstr "Stil"
+
+#: ../src/lxfontconfig/lxfontconfig.py:359
+#: ../src/lxfontconfig/lxfontconfig.py:373
+msgid "none"
+msgstr "kein"
+
+#: ../src/lxfontconfig/lxfontconfig.py:360
+msgid "slight"
+msgstr "wenig"
+
+#: ../src/lxfontconfig/lxfontconfig.py:361
+msgid "medium"
+msgstr "mittel"
+
+#: ../src/lxfontconfig/lxfontconfig.py:362
+msgid "full"
+msgstr "voll"
+
+#: ../src/lxfontconfig/lxfontconfig.py:364
+msgid "stronger Hinting make fonts sharper"
+msgstr "stÃ¤rkeres Hinting macht die Schrift schÃ¤rfer"
+
+#: ../src/lxfontconfig/lxfontconfig.py:370
+msgid "Sub pixel geometry"
+msgstr "Sub Pixel Rendering"
+
+#: ../src/lxfontconfig/lxfontconfig.py:374
+msgid "don't split a pixel into 3 subpixels (no color artefacts)"
+msgstr "Pixel nicht in Unterpixel unterteilen (keine Farbartefakte an Schriftzeichen)"
+
+#: ../src/lxfontconfig/lxfontconfig.py:383
+msgid "rgb"
+msgstr "rgb"
+
+#: ../src/lxfontconfig/lxfontconfig.py:384
+#: ../src/lxfontconfig/lxfontconfig.py:394
+msgid "split a pixel horizontal into 3 subpixels"
+msgstr "teilt ein Pixel horizontal in 3 Unterpixel"
+
+#: ../src/lxfontconfig/lxfontconfig.py:393
+msgid "bgr"
+msgstr "bgr"
+
+#: ../src/lxfontconfig/lxfontconfig.py:403
+msgid "vrgb"
+msgstr "vertikal rgb"
+
+#: ../src/lxfontconfig/lxfontconfig.py:404
+#: ../src/lxfontconfig/lxfontconfig.py:414
+msgid "split a pixel vertical into 3 subpixels"
+msgstr "teilt ein Pixel vertikal in 3 Unterpixel"
+
+#: ../src/lxfontconfig/lxfontconfig.py:413
+msgid "vbgr"
+msgstr "vertikal bgr"
+
+#: ../src/lxfontconfig/lxfontconfig.py:423
+msgid "Screen resolution"
+msgstr "Bildschirm AuflÃ¶sung"
+
+#: ../src/lxfontconfig/lxfontconfig.py:427
+msgid "override dpi"
+msgstr "Ã¼berschreibe dpi"
+
+#: ../src/lxfontconfig/lxfontconfig.py:438
+msgid "Save"
+msgstr "Speichern"
+
+#: ../src/lxkeyboardconf/lxkeyboardconf.py:377
+msgid "DoubleClick Language"
+msgstr "Doppelklicke Sprache zum aktivieren!"
+
+#: ../src/lxkeyboardconf/lxkeyboardconf.py:398
+msgid "Language"
+msgstr "Sprache"
+
+#: ../src/lxkeyboardconf/lxkeyboardconf.py:399
+#: ../src/lxservices/lxservices.py:214
+msgid "Description"
+msgstr "Beschreibung"
+
+#: ../src/lxkeyboardconf/lxkeyboardconf.py:400
+msgid "Variant"
+msgstr "Variante"
+
+#: ../src/lxkeyboardconf/lxkeyboardconf.py:420
+msgid "install service:  ~/.config/autostart/xkeyboard"
+msgstr "installiere Dienst: ~/.config/autostart/xkeyboard"
+
+#: ../src/lxkeyboardconf/lxkeyboardconf.py:428
+msgid "Default:"
+msgstr "Default:"
+
+#: ../src/lxkeyboardconf/lxkeyboardconf.py:430
+msgid "Variant:"
+msgstr "Variante:"
+
+#: ../src/lxscreenshot/lxscreenshot.py:138
+msgid "_Screenshot"
+msgstr "_Bildschirmphoto"
+
+#: ../src/lxservices/lxservices.py:213
+msgid "Service"
+msgstr "Dienst"
+
+#: ../src/openbox-keyconf/openbox-keyconf.py:140
+msgid "Help: keyboard codes"
+msgstr "Hilfe: Tastaturcodes"
+
+#: ../src/openbox-keyconf/openbox-keyconf.py:364
+msgid "NameOfProgram"
+msgstr "NameDesProgramms"
+
+#. Sets the border width of the window.
+#: ../src/openbox-keyconf/openbox-keyconf.py:434
+msgid "openbox keyboard bindings"
+msgstr "Openbox Tastenkombinationen"
+
+#: ../src/openbox-keyconf/openbox-keyconf.py:450
+msgid "Key"
+msgstr "Tasten"
+
+#: ../src/openbox-keyconf/openbox-keyconf.py:451
+msgid "Action"
+msgstr "Aktion"
+
+#: ../src/openbox-keyconf/openbox-keyconf.py:525
+msgid "Edit command"
+msgstr "bearbeite Befehl"
