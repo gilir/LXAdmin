@@ -19,24 +19,26 @@
 #                                                                         *
 #**************************************************************************
 
+from gettext import gettext as _
+
 control_center_icons=[
 ["name","icon","command"],
-["Login Screen","config-users",'su-to-root -X -c "/usr/bin/lxdmconf"'],
-["Configure Openbox","obconf",'obconf'],
-["Preferred Applications","applications-system",'libfm-pref-apps'],
-["Openbox Keyboard Shortcuts","input-keyboard",'openbox-keyconf'],
-["Keyboard Layout","input-keyboard",'keyboardconf'],
-["Mouse&Keyboard","input-keyboard",'lxinput'],
-["Set Wallpaper","desktop",'pcmanfm --desktop-pref'],
-["Screensaver Settings","xscreensaver",'xscreensaver-demo'],
-["Appearance","preferences-desktop-theme",'lxappearance'],
-["configure Fonts","format-text-bold",'fontconfig.py'],
-["PCManFM Settings","file-manager",'pcmanfm --show-pref=1'],
-["PCManFM Superuser Mode","file-manager",'su-to-root -X -c "pcmanfm --no-desktop"'],
-["Refresh Panel","gtk-refresh",'lxpanelctl restart'],
-["Search Software","search",'apt-leo'],
-["Session Settings","gnome-window-manager",'lxsession-edit'],
-["Monitor Settings","computer",'lxrandr'],
+[_("Login Screen"),"config-users",'su-to-root -X -c "/usr/bin/lxdmconf"'],
+[_("Configure Openbox"),"obconf",'obconf'],
+[_("Preferred Applications"),"applications-system",'libfm-pref-apps'],
+[_("Openbox Keyboard Shortcuts"),"input-keyboard",'openbox-keyconf'],
+[_("Keyboard Layout"),"input-keyboard",'keyboardconf'],
+[_("Mouse&Keyboard"),"input-keyboard",'lxinput'],
+[_("Set Wallpaper"),"desktop",'pcmanfm --desktop-pref'],
+[_("Screensaver Settings"),"xscreensaver",'xscreensaver-demo'],
+[_("Appearance"),"preferences-desktop-theme",'lxappearance'],
+[_("configure Fonts"),"format-text-bold",'fontconfig.py'],
+[_("PCManFM Settings"),"file-manager",'pcmanfm --show-pref=1'],
+[_("PCManFM Superuser Mode"),"file-manager",'su-to-root -X -c "pcmanfm --no-desktop"'],
+[_("Refresh Panel"),"gtk-refresh",'lxpanelctl restart'],
+[_("Search Software"),"search",'apt-leo'],
+[_("Session Settings"),"gnome-window-manager",'lxsession-edit'],
+[_("Monitor Settings"),"computer",'lxrandr'],
 ]
 
 
@@ -53,8 +55,6 @@ pygtk.require('2.0')
 import gtk
 import codecs
 import pango
-
-from gettext import gettext as _
 
 I18N={}
 
