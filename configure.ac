@@ -6,6 +6,8 @@ prog_name = lxadmin
 AC_PREREQ([2.63])
 AC_INIT([lxadmin], [0.1.0], [http://lxde.org/])
 AM_INIT_AUTOMAKE([-Wall -Werror foreign])
+AC_CONFIG_MACRO_DIR([m4])
+AC_SUBST(ACLOCAL_AMFLAGS, "$ACLOCAL_FLAGS -I m4")
 
 AC_CONFIG_HEADERS([config.h])
 
