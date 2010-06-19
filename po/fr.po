@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: lxadmin 0.1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-06-19 17:42+0200\n"
+"POT-Creation-Date: 2010-06-20 00:48+0200\n"
 "PO-Revision-Date: 2010-06-19 17:42+0200\n"
 "Last-Translator: Julien Lavergne <gilir@ubuntu.com>\n"
 "Language-Team: French\n"
@@ -56,7 +56,7 @@ msgstr ""
 msgid "Define the keyboard layout"
 msgstr ""
 
-#: ../data/lxkeyboard-setup.desktop.in.h:2
+#: ../data/lxkeyboard-setup.desktop.in.h:2 ../src/lxcc/lxcc.py:30
 msgid "Keyboard Layout"
 msgstr ""
 
@@ -104,56 +104,118 @@ msgstr ""
 msgid "Keyboard Shortcuts"
 msgstr ""
 
-#: ../data/openbox-keyconf.desktop.in.h:2
+#: ../data/openbox-keyconf.desktop.in.h:2 ../src/lxcc/lxcc.py:29
 msgid "Openbox Keyboard Shortcuts"
+msgstr ""
+
+#: ../src/lxcc/lxcc.py:26
+#, fuzzy
+msgid "Login Screen"
+msgstr "Ecran de connexion"
+
+#: ../src/lxcc/lxcc.py:27
+msgid "Configure Openbox"
+msgstr ""
+
+#: ../src/lxcc/lxcc.py:28
+msgid "Preferred Applications"
+msgstr ""
+
+#: ../src/lxcc/lxcc.py:31
+msgid "Mouse&Keyboard"
+msgstr ""
+
+#: ../src/lxcc/lxcc.py:32
+msgid "Set Wallpaper"
+msgstr ""
+
+#: ../src/lxcc/lxcc.py:33
+msgid "Screensaver Settings"
+msgstr ""
+
+#: ../src/lxcc/lxcc.py:34
+msgid "Appearance"
+msgstr ""
+
+#: ../src/lxcc/lxcc.py:35
+#, fuzzy
+msgid "configure Fonts"
+msgstr "LXDM configuration"
+
+#: ../src/lxcc/lxcc.py:36
+msgid "PCManFM Settings"
+msgstr ""
+
+#: ../src/lxcc/lxcc.py:37
+msgid "PCManFM Superuser Mode"
+msgstr ""
+
+#: ../src/lxcc/lxcc.py:38
+msgid "Refresh Panel"
+msgstr ""
+
+#: ../src/lxcc/lxcc.py:39
+msgid "Search Software"
+msgstr ""
+
+#: ../src/lxcc/lxcc.py:40
+msgid "Session Settings"
+msgstr ""
+
+#: ../src/lxcc/lxcc.py:41
+msgid "Monitor Settings"
 msgstr ""
 
 #: ../src/lxcc/lxcc.py:118
 msgid "LXDE-Control-Center"
 msgstr ""
 
+#: ../src/lxdmconf/lxdmconf.py:178
+msgid "ERROR: lxdmconf is not launched as root"
+msgstr ""
+
 #. Sets the border width of the window.
-#: ../src/lxdmconf/lxdmconf.py:412
+#: ../src/lxdmconf/lxdmconf.py:423
 msgid "lxdm Login Configuration"
 msgstr "lxdm configuration de la connexion"
 
-#: ../src/lxdmconf/lxdmconf.py:418
+#: ../src/lxdmconf/lxdmconf.py:429
 msgid "Numlock"
 msgstr "Numlock"
 
-#: ../src/lxdmconf/lxdmconf.py:419
+#: ../src/lxdmconf/lxdmconf.py:430
 msgid "choose Language"
 msgstr "Choisir votre langage"
 
-#: ../src/lxdmconf/lxdmconf.py:420
+#: ../src/lxdmconf/lxdmconf.py:431
 msgid "Bottom Pane"
 msgstr "Panneau inférieur"
 
-#: ../src/lxdmconf/lxdmconf.py:421
+#: ../src/lxdmconf/lxdmconf.py:432
 msgid "autologin"
 msgstr "Auto-connexion"
 
-#: ../src/lxdmconf/lxdmconf.py:422
+#: ../src/lxdmconf/lxdmconf.py:433
 msgid "User"
 msgstr "Utilisateur"
 
-#: ../src/lxdmconf/lxdmconf.py:435
+#: ../src/lxdmconf/lxdmconf.py:446
 msgid "session"
 msgstr "Session"
 
-#: ../src/lxdmconf/lxdmconf.py:450
+#: ../src/lxdmconf/lxdmconf.py:461
 msgid "Theme"
 msgstr "Thème"
 
-#: ../src/lxdmconf/lxdmconf.py:451
+#: ../src/lxdmconf/lxdmconf.py:462
 msgid "Background"
 msgstr "Fond d'écran"
 
-#: ../src/lxdmconf/lxdmconf.py:482
+#: ../src/lxdmconf/lxdmconf.py:493
 msgid "General"
 msgstr "Général"
 
-#: ../src/lxdmconf/lxdmconf.py:483
+#: ../src/lxdmconf/lxdmconf.py:494
 msgid "Themes"
 msgstr "Themes"
 
