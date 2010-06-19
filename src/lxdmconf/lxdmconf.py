@@ -168,60 +168,71 @@ class Tool:
 
     def save(self,data=None):
         #Apply Button is clicked
-        print '==================================='       
-        os.system('mkdir  /etc/lxdm.d  2>/dev/null')
-
-        if self.cb_numlock.get_active(): 
-           self.config=write_entry(self.config,'[base]','numlock=','1')
+        print '==================================='
+        userid=os.getuid()
+        if userid!=0:
+               dialog = gtk.MessageDialog(self.window, 
+                                          gtk.DIALOG_MODAL,
+                                          gtk.MESSAGE_ERROR,
+                                          gtk.BUTTONS_OK, 
+                                          _("ERROR: lxdmconf is not launched as root"))
+               result = dialog.run()
+               dialog.destroy()
+               sys.exit(1)
         else:
-           self.config=write_entry(self.config,'[base]','numlock=','0')
+            os.system('mkdir  /etc/lxdm.d  2>/dev/null')
 
-        if self.cb_lang.get_active(): 
-           self.config=write_entry(self.config,'[display]','lang=','1')
-        else:
-           self.config=write_entry(self.config,'[display]','lang=','0')
+            if self.cb_numlock.get_active(): 
+                self.config=write_entry(self.config,'[base]','numlock=','1')
+            else:
+                self.config=write_entry(self.config,'[base]','numlock=','0')
 
-        if self.cb_bottom.get_active(): 
-           self.config=write_entry(self.config,'[display]','bottom_pane=','1')
-        else:
-           self.config=write_entry(self.config,'[display]','bottom_pane=','0')
+            if self.cb_lang.get_active(): 
+                self.config=write_entry(self.config,'[display]','lang=','1')
+            else:
+                self.config=write_entry(self.config,'[display]','lang=','0')
 
-        if self.cb_autologin.get_active(): 
-           a=self.entryuser.get_text()
-           a=a.strip()
-           self.config=write_entry(self.config,'[base]','autologin=',a)
-        else:
-           self.config=delete_entry(self.config,'autologin=')      
+            if self.cb_bottom.get_active(): 
+                self.config=write_entry(self.config,'[display]','bottom_pane=','1')
+            else:
+                self.config=write_entry(self.config,'[display]','bottom_pane=','0')
 
-        a=self.entrysession.get_text()
-        a=a.strip()
-        if self.cb_session.get_active():
-           self.config=write_entry(self.config,'[base]','session=',a)
-        else:
-           self.config=delete_entry(self.config,'session=')
+            if self.cb_autologin.get_active(): 
+                a=self.entryuser.get_text()
+                a=a.strip()
+                self.config=write_entry(self.config,'[base]','autologin=',a)
+            else:
+                self.config=delete_entry(self.config,'autologin=')      
 
-        model = self.combobox.get_model()
-        index = self.combobox.get_active()
-        theme=model[index][0]
-        self.config=write_entry(self.config,'[display]','bg=',theme)
+            a=self.entrysession.get_text()
+            a=a.strip()
+            if self.cb_session.get_active():
+                self.config=write_entry(self.config,'[base]','session=',a)
+            else:
+                self.config=delete_entry(self.config,'session=')
 
-        model = self.comboboxLXDM.get_model()
-        index = self.comboboxLXDM.get_active()
-        theme=model[index][0]
-        self.config=write_entry(self.config,'[display]','theme=',theme)
+            model = self.combobox.get_model()
+            index = self.combobox.get_active()
+            theme=model[index][0]
+            self.config=write_entry(self.config,'[display]','bg=',theme)
 
-        model = self.comboboxGTK.get_model()
-        index = self.comboboxGTK.get_active()
-        theme=model[index][0]
-        self.config=write_entry(self.config,'[display]','gtk_theme=',theme)
+            model = self.comboboxLXDM.get_model()
+            index = self.comboboxLXDM.get_active()
+            theme=model[index][0]
+            self.config=write_entry(self.config,'[display]','theme=',theme)
 
-        f=codecs.open('/etc/lxdm/lxdm.conf','w','utf_8')
-        for line in self.config:
-            text=line+'\n'
-            f.write(text)
-        f.close()
-        #gtk.main_quit()
-        self.goodbye()
+            model = self.comboboxGTK.get_model()
+            index = self.comboboxGTK.get_active()
+            theme=model[index][0]
+            self.config=write_entry(self.config,'[display]','gtk_theme=',theme)
+
+            f=codecs.open('/etc/lxdm/lxdm.conf','w','utf_8')
+            for line in self.config:
+                text=line+'\n'
+                f.write(text)
+            f.close()
+            #gtk.main_quit()
+            self.goodbye()
 
 
     def read_config(self):
@@ -501,12 +512,6 @@ class Tool:
         window.set_border_width(2)
         self.read_config()
         window.show_all()
-        userid=os.getuid()
-        if userid!=0:
-               dialog = gtk.MessageDialog(self.window, gtk.DIALOG_MODAL,gtk.MESSAGE_ERROR,gtk.BUTTONS_OK, "ERROR: not root!")
-               result = dialog.run()
-               dialog.destroy()
-               sys.exit(1)
 
 
     def main(self):
