@@ -18,9 +18,7 @@
 #   along with this program.  If not, see <http://www.gnu.org/licenses/>. *
 #                                                                         *
 #**************************************************************************
-import locale
-locale.setlocale(locale.LC_ALL, '')           #set locale from 'LANG'
-Xcodec=locale.getpreferredencoding(False)
+
 import os
 import sys
 import time
@@ -32,37 +30,13 @@ import gtk
 import pango
 import gc
 
-from gettext import gettext as _
+import gettext
+import lxadmin.defs as defs
 
-I18N={}
+gettext.bindtextdomain('lxadmin', defs.LOCALE_DIR)
+gettext.textdomain('lxadmin')
+_ = gettext.gettext
 
-def i18n(text):
-    if I18N_ready:
-       if I18N.has_key(text): return I18N[text]
-       else: return text
-    else: return text
-
-def load_i18n(filename):
-     #lÃ¤dt Internationalisierung.moo file
-     ready=False
-     lang=os.getenv('LANG')
-     if not lang: return ready
-     lang2='/usr/share/locale/'+lang[0:2] +'/LC_MESSAGES/'+filename
-     lang3='/usr/share/locale/'+lang[0:5] +'/LC_MESSAGES/'+filename
-     lang='no file'
-     if   os.access(lang3,os.R_OK): lang=lang3
-     elif os.access(lang2,os.R_OK): lang=lang2
-     if lang != 'no file':
-        f=codecs.open(lang,'r','utf_8')
-        if f:
-           lang=f.readlines()
-           f.close()
-           ready=True
-           for z in lang:
-               s=z.replace('\n','').split('=')
-               if s[0]=='': continue
-               I18N[s[0]]=s[1]
-     return ready
 
 def finden(arg,dir,filenames):
     #subprocess of os.path.walk: get filenames in directorys
@@ -540,11 +514,47 @@ class Tool:
 # If the program is run directly or passed as an argument to the python
 # interpreter then create a HelloWorld instance and show it
 if __name__ == "__main__":
-     codec1=Xcodec.lower().replace('iso-','iso').replace('-','_')
-     if 'ansi' in codec1: codec1='iso8859_1'  #Ansi is shit...
-     I18N_ready = load_i18n('lxdmconf.moo')
      Elfriede = Tool()
      Elfriede.main()
 
+'''
+Desactived previous local support
+import locale
+locale.setlocale(locale.LC_ALL, '')           #set locale from 'LANG'
+Xcodec=locale.getpreferredencoding(False)
 
+I18N={}
+
+def i18n(text):
+    if I18N_ready:
+       if I18N.has_key(text): return I18N[text]
+       else: return text
+    else: return text
+
+def load_i18n(filename):
+     #lÃ¤dt Internationalisierung.moo file
+     ready=False
+     lang=os.getenv('LANG')
+     if not lang: return ready
+     lang2='/usr/share/locale/'+lang[0:2] +'/LC_MESSAGES/'+filename
+     lang3='/usr/share/locale/'+lang[0:5] +'/LC_MESSAGES/'+filename
+     lang='no file'
+     if   os.access(lang3,os.R_OK): lang=lang3
+     elif os.access(lang2,os.R_OK): lang=lang2
+     if lang != 'no file':
+        f=codecs.open(lang,'r','utf_8')
+        if f:
+           lang=f.readlines()
+           f.close()
+           ready=True
+           for z in lang:
+               s=z.replace('\n','').split('=')
+               if s[0]=='': continue
+               I18N[s[0]]=s[1]
+     return ready
+     
+     codec1=Xcodec.lower().replace('iso-','iso').replace('-','_')
+     if 'ansi' in codec1: codec1='iso8859_1'  #Ansi is shit...
+     I18N_ready = load_i18n('lxdmconf.moo')
+'''
 
