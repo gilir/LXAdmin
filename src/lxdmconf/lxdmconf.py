@@ -32,6 +32,7 @@ import gc
 
 import gettext
 import lxadmin.defs as defs
+import lxadmin.detect_os as detect_os
 
 gettext.bindtextdomain('lxadmin', defs.LOCALE_DIR)
 gettext.textdomain('lxadmin')
@@ -225,10 +226,14 @@ class Tool:
 
     def read_config(self):
         filename='/etc/lxdm.d/lxdm_custom.conf'
-        if not os.access(filename,os.R_OK): filename='/etc/lxdm/lxdm.conf'
-        f=codecs.open(filename,'r','utf_8')
-        text=f.read()
-        f.close()
+        if not os.access(filename,os.R_OK): filename=detect_os.get_lxdm_config()
+        try:
+            f=codecs.open(filename,'r','utf_8')
+            text=f.read()
+            f.close()
+        except:
+            #TODO Exist saying that lxdm is not installed.
+            text = ""
         self.config=text.split('\n')
 
         a=read_entry(self.config,"numlock=","0")
