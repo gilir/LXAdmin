@@ -77,6 +77,18 @@ AC_SUBST(GETTEXT_PACKAGE)
 AM_GLIB_GNU_GETTEXT
 AC_DEFINE_UNQUOTED(GETTEXT_PACKAGE,"$GETTEXT_PACKAGE", [Gettext package.])
 
+# Add system directory for defs.in
+
+AC_SUBST(VERSION)
+AC_SUBST(PACKAGE)
+
+AS_AC_EXPAND(PYTHONDIR, $pythondir)
+AS_AC_EXPAND(BINDIR, $bindir)
+AS_AC_EXPAND(LOCALEDIR, $datarootdir/locale)
+AS_AC_EXPAND(PKGDATADIR, $datarootdir/$PACKAGE)
+AS_AC_EXPAND(DATADIR, $datarootdir/$PACKAGE)
+AS_AC_EXPAND(DESKTOPFILEDIR, $datarootdir/applications)
+
 AC_CONFIG_FILES([
     Makefile
     data/Makefile
@@ -85,6 +97,7 @@ AC_CONFIG_FILES([
     data/ui/lxproxy/Makefile
     po/Makefile.in
     src/Makefile
+    src/common/defs.py
     src/lxcc/Makefile
     src/lxdmconf/Makefile
     src/lxfontconfig/Makefile
