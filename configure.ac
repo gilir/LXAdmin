@@ -100,6 +100,7 @@ AC_CONFIG_FILES([
     po/Makefile.in
     src/Makefile
     src/common/defs.py
+    src/common/Makefile
     src/lxcc/Makefile
     src/lxdmconf/Makefile
     src/lxfontconfig/Makefile
