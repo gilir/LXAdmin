@@ -1,0 +1,21 @@
+Source: lxadmin
+Section: admin
+Priority: extra
+Maintainer: Julien Lavergne <gilir@ubuntu.com>
+Build-Depends: debhelper (>= 7.0.50~),
+               autotools-dev,
+               libgtk2.0-dev (>= 2.16),
+               python-support,
+               intltool
+Standards-Version: 3.8.4
+Homepage: http://launchpad.net/lxadmin
+Vcs-Git: git://git.debian.org/git/collab-maint/lxadmin.git
+Vcs-Browser: http://git.debian.org/?p=collab-maint/lxadmin.git;a=summary
+
+Package: lxdmconf
+Architecture: any
+Depends: ${shlibs:Depends},
+         ${misc:Depends},
+         $(python:Depends},
+Description: utility to change lxdm options
+ lxdmconf is an utility to change login options in LXDE when using LXDM.
