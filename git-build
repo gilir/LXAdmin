@@ -1,0 +1,4 @@
+#! /bin/sh
+
+gnome-autogen.sh --sysconfdir=/etc
+git-buildpackage --git-export=WC --git-ignore-new --git-debian-branch=master
