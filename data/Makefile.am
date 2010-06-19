@@ -1,6 +1,6 @@
 NULL=
 
-SUBDIRS= ui media
+SUBDIRS= media
 
 desktopdir=$(datadir)/applications
 desktop_in_files = \
