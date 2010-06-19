@@ -1,0 +1,2 @@
+Generate the .pot file : gnome-autogen.sh && cd po && make update-po
+Generate a .po file, for example fr locale : msginit --locale=fr --input=lxadmin.pot
