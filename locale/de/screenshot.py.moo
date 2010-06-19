@@ -1,2 +1,0 @@
-Screenshot=Bildschirmphoto
-_Screenshot=_Bildschirmphoto
