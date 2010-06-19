@@ -94,7 +94,6 @@ AS_AC_EXPAND(DESKTOPFILEDIR, $datarootdir/applications)
 AC_CONFIG_FILES([
     Makefile
     data/Makefile
-    data/ui/Makefile
     data/media/Makefile
     po/Makefile.in
     src/Makefile
