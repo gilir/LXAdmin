@@ -20,7 +20,7 @@ import gtk
 from desktopcouch.records.server import CouchDatabase
 from desktopcouch.records.record import Record
 
-from lxproxy.lxproxyconfig import getdatapath
+from lxproxyconfig import getdatapath
 
 class PreferencesLxproxyDialog(gtk.Dialog):
     __gtype_name__ = "PreferencesLxproxyDialog"
@@ -113,7 +113,7 @@ def NewPreferencesLxproxyDialog():
     """
 
     #look for the ui file that describes the ui
-    ui_filename = os.path.join(getdatapath(), 'ui', 'PreferencesLxproxyDialog.ui')
+    ui_filename = os.path.join(getdatapath(), 'ui', 'lxproxy', 'PreferencesLxproxyDialog.ui')
     if not os.path.exists(ui_filename):
         ui_filename = None
 

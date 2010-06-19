@@ -18,7 +18,7 @@ import sys
 import os
 import gtk
 
-from lxproxy.lxproxyconfig import getdatapath
+from lxproxyconfig import getdatapath
 
 class AboutLxproxyDialog(gtk.AboutDialog):
     __gtype_name__ = "AboutLxproxyDialog"
@@ -55,7 +55,7 @@ def NewAboutLxproxyDialog():
     """
 
     #look for the ui file that describes the ui
-    ui_filename = os.path.join(getdatapath(), 'ui', 'AboutLxproxyDialog.ui')
+    ui_filename = os.path.join(getdatapath(), 'ui', 'lxproxy', 'AboutLxproxyDialog.ui')
     if not os.path.exists(ui_filename):
         ui_filename = None
 

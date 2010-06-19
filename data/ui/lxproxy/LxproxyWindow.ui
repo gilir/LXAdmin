@@ -3,13 +3,13 @@
   <requires lib="gtk+" version="2.16"/>
   <!-- interface-requires lxproxy_window 1.0 -->
   <!-- interface-naming-policy project-wide -->
-  <!-- interface-local-resource-path ../media -->
+  <!-- interface-local-resource-path ../../media -->
   <object class="LxproxyWindow" id="lxproxy_window">
     <property name="width_request">500</property>
     <property name="height_request">250</property>
     <property name="title" translatable="yes">Proxy Settings</property>
     <property name="window_position">center</property>
-    <property name="icon">../media/icon.png</property>
+    <property name="icon">../../media/icon.png</property>
     <signal name="destroy" handler="on_destroy"/>
     <child>
       <object class="GtkVBox" id="vbox1">

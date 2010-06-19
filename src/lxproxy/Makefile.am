@@ -4,7 +4,7 @@ SUBDIRS=
 
 lxproxydir = $(prefix)/bin
 
-lxproxymoduledir = $(pkgdatadir)
+lxproxymoduledir = $(pkgdatadir)/lxproxy
 lxproxymodule_DATA =	\
 	__init__.py	\
     AboutLxproxyDialog.py \
@@ -24,3 +24,6 @@ EXTRA_DIST =  \
     lxproxy.py \
     $(lxproxymodule_DATA) \
 	$(NULL)
+
+clean-local:
+	rm -rf *.pyc *.pyo

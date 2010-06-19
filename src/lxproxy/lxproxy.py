@@ -34,8 +34,8 @@ DEFAULTDICT = {"export http_proxy": "http://user:password@hostname:8080",
                "export https_proxy": "http://user:password@hostname:8080",
                "export ftp_proxy": "http://user:password@hostname:8080"}
 
-from lxproxy import AboutLxproxyDialog
-from lxproxy.lxproxyconfig import getdatapath
+import AboutLxproxyDialog
+from lxproxyconfig import getdatapath
 
 class LxproxyWindow(gtk.Window):
     __gtype_name__ = "LxproxyWindow"
@@ -106,14 +106,17 @@ class LxproxyWindow(gtk.Window):
         #code for other initialization actions should be added here
 
     def readfile(self):
+        profile_location = os.path.expanduser('~/.profile')
+        if not os.path.exists(profile_location):
+            tmpfile = open(profile_location, 'w') 
+            tmpfile.write('') 
+            tmpfile.close()
         try:
-            f = file(home + "/.profile")
-            data = f.read()
-        except:
-            print "Could not open proxyconfig" 
-        finally:
-            f.close()
+            data = profile_location.read()
+            profile_location.close()
             config = self.parse(data)
+        except:
+            print "Could not open proxyconfig"
 
     def parse(self, s):
         #Fetch a *copy* of the default dictionary.
@@ -232,10 +235,11 @@ def NewLxproxyWindow():
     """
 
     #look for the ui file that describes the ui
-    ui_filename = os.path.join(getdatapath(), 'ui', 'LxproxyWindow.ui')
+    ui_filename = os.path.join(getdatapath(), 'ui', 'lxproxy', 'LxproxyWindow.ui')
     if not os.path.exists(ui_filename):
         ui_filename = None
 
+    print ('1',ui_filename)
     builder = gtk.Builder()
     builder.add_from_file(ui_filename)
     window = builder.get_object("lxproxy_window")

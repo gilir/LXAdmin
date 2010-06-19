@@ -21,7 +21,7 @@
 
 # where your project will head for your data (for instance, images and ui files)
 # by default, this is ../data, relative your trunk layout
-__lxproxy_data_directory__ = '../data/'
+__lxproxy_data_directory__ = '../../data/'
 
 
 import os
