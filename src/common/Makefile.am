@@ -1,6 +1,6 @@
 SUBDIRS =
 
-commondir = $(pythondir)/lxadmin/common
+commondir = $(pythondir)/lxadmin
 common_PYTHON = \
 	defs.py
 	
