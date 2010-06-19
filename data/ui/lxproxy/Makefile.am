@@ -8,6 +8,7 @@ ui_DATA= \
 	PreferencesLxproxyDialog.ui \
 	$(NULL)
 
+xmldir=$(datadir)/lxproxy/ui
 xml_DATA= \
 	about_lxproxy_dialog.xml \
 	lxproxy_window.xml \
