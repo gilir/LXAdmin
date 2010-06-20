@@ -38,6 +38,15 @@ Depends: lxadmin (= ${binary:Version}),
 Description: utility to change proxy options
  lxproxy is an utility to change proxy options in LXDE.
 
+Package: lxfontconfig
+Architecture: any
+Depends: lxadmin (= ${binary:Version}),
+         ${shlibs:Depends},
+         ${misc:Depends},
+         ${python:Depends}
+Description: utility to change font options.
+ lxfontconfig is an utility to change font options in LXDE.
+
 Package: lxcc
 Architecture: any
 Depends: lxadmin (= ${binary:Version}),
