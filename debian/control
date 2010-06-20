@@ -13,7 +13,7 @@ Vcs-Git: git://git.debian.org/git/collab-maint/lxadmin.git
 Vcs-Browser: http://git.debian.org/?p=collab-maint/lxadmin.git;a=summary
 
 Package: lxadmin
-Architecture: any
+Architecture: all
 Depends: ${shlibs:Depends},
          ${misc:Depends},
          ${python:Depends}
@@ -21,7 +21,7 @@ Description: common files for lxadmin utilities
  lxadmin are common files for lxadmin utilities.
 
 Package: lxdmconf
-Architecture: any
+Architecture: all
 Depends: lxadmin (= ${binary:Version}),
          ${shlibs:Depends},
          ${misc:Depends},
@@ -30,7 +30,7 @@ Description: utility to change lxdm options
  lxdmconf is an utility to change login options in LXDE when using LXDM.
  
 Package: lxproxy
-Architecture: any
+Architecture: all
 Depends: lxadmin (= ${binary:Version}),
          ${shlibs:Depends},
          ${misc:Depends},
@@ -39,7 +39,7 @@ Description: utility to change proxy options
  lxproxy is an utility to change proxy options in LXDE.
 
 Package: lxfontconfig
-Architecture: any
+Architecture: all
 Depends: lxadmin (= ${binary:Version}),
          ${shlibs:Depends},
          ${misc:Depends},
@@ -48,7 +48,7 @@ Description: utility to change font options.
  lxfontconfig is an utility to change font options in LXDE.
 
 Package: lxkeyboardconf
-Architecture: any
+Architecture: all
 Depends: lxadmin (= ${binary:Version}),
          ${shlibs:Depends},
          ${misc:Depends},
@@ -58,7 +58,7 @@ Description: utility to change keyboard layout.
  lxkeyboardconf is an utility to change keyboard layout in LXDE.
 
 Package: lxscreenshot
-Architecture: any
+Architecture: all
 Depends: lxadmin (= ${binary:Version}),
          ${shlibs:Depends},
          ${misc:Depends},
@@ -67,7 +67,7 @@ Description: utility to take screenshot.
  lxscreenshot is an utility to take screenshot in LXDE.
 
 Package: lxservices
-Architecture: any
+Architecture: all
 Depends: lxadmin (= ${binary:Version}),
          ${shlibs:Depends},
          ${misc:Depends},
@@ -76,7 +76,7 @@ Description: utility to manage services.
  lxservices is an utility to manage services in LXDE.
 
 Package: openbox-keyconf
-Architecture: any
+Architecture: all
 Depends: lxadmin (= ${binary:Version}),
          ${shlibs:Depends},
          ${misc:Depends},
@@ -85,7 +85,7 @@ Description: utility to change openbox keyboard configuration.
  openbox-keyconf is an utility change openbox keyboard configuration in LXDE.
 
 Package: lxcc
-Architecture: any
+Architecture: all
 Depends: lxadmin (= ${binary:Version}),
          ${shlibs:Depends},
          ${misc:Depends},
