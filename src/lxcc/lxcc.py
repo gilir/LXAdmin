@@ -19,7 +19,24 @@
 #                                                                         *
 #**************************************************************************
 
+import lxadmin.defs as defs
+
+import gettext
+
+gettext.bindtextdomain('lxadmin', defs.LOCALE_DIR)
+gettext.textdomain('lxadmin')
+_ = gettext.gettext
+
 from gettext import gettext as _
+
+import os
+import sys
+import string
+import pygtk
+pygtk.require('2.0')
+import gtk
+import codecs
+import pango
 
 control_center_icons=[
 ["name","icon","command"],
@@ -40,53 +57,6 @@ control_center_icons=[
 [_("Session Settings"),"gnome-window-manager",'lxsession-edit'],
 [_("Monitor Settings"),"computer",'lxrandr'],
 ]
-
-
-
-
-import locale
-locale.setlocale(locale.LC_ALL, '')   #set locale from 'LANG'
-Xcodec=locale.getpreferredencoding(False)
-import os
-import sys
-import string
-import pygtk
-pygtk.require('2.0')
-import gtk
-import codecs
-import pango
-
-I18N={}
-
-def i18n(text):
-    #liefert einen Internationialisierungstext zurück
-    if I18N_ready:
-       if I18N.has_key(text): return I18N[text]
-       else: return text
-    else: return text
-
-def load_i18n(filename):
-     #lädt das Internationalisierung.moo file
-     ready=False
-     lang=os.getenv('LANG')
-     if not lang: return ready
-     lang2='/usr/share/locale/'+lang[0:2] +'/LC_MESSAGES/'+filename
-     lang3='/usr/share/locale/'+lang[0:5] +'/LC_MESSAGES/'+filename
-     lang='no file'
-     if   os.access(lang3,os.R_OK): lang=lang3
-     elif os.access(lang2,os.R_OK): lang=lang2
-     if lang != 'no file':
-        f=codecs.open(lang,'r','utf_8')
-        if f:
-           lang=f.readlines()
-           f.close()
-           ready=True
-           for z in lang:
-               s=z.replace('\n','').split('=')
-               if s[0]=='': continue
-               I18N[s[0]]=s[1]
-     return ready
-
 
 class Simple:
 
@@ -147,7 +117,7 @@ class Simple:
                   pixbuf=it.load_icon(line[1],48,gtk.ICON_LOOKUP_FORCE_SVG)
             except:
                pixbuf=it.load_icon('gtk-stop',48,gtk.ICON_LOOKUP_FORCE_SVG)
-            namen=i18n(line[0])
+            namen=(line[0])
             self.liststore.append([ pixbuf,namen,line[2] ])
         window.show_all()
 
@@ -161,6 +131,5 @@ class Simple:
 # If the program is run directly or passed as an argument to the python
 # interpreter then create a HelloWorld instance and show it
 if __name__ == "__main__":
-     I18N_ready = load_i18n('lxcc.moo')
      app = Simple()
      app.main()
