@@ -99,7 +99,7 @@ import pango
 import gobject
 import gc
 
-configfile=detect_os.get_openbox_config():
+configfile=detect_os.get_openbox_config()
 mybuffer=None
 helpwindow=None
 
