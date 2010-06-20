@@ -27,13 +27,21 @@ os_detection = platform.dist()
 #Detect session
 session = os.environ['DESKTOP_SESSION']
 
-def get_lxdm_config():
-    if os_detection[0] == 'Ubuntu':
-        if session == 'Lubuntu':
-            config_lxdm = '/etc/xdg/lubuntu/lxdm/lxdm.conf'
-        else:
-            config_lxdm = '/etc/xdg/lxdm/default.conf'
-    else:
-        config_lxdm = '/etc/lxdm/lxdm.conf'
 
+# Set configuration location.
+if os_detection[0] == 'Ubuntu':
+    if session == 'Lubuntu':
+        config_lxdm = '/etc/xdg/lubuntu/lxdm/lxdm.conf'
+        config_openbox_local = os.path.expanduser("~/.config/openbox/lubuntu-rc.xml")
+    else:
+        config_lxdm = '/etc/xdg/lxdm/default.conf'
+        config_openbox_local = os.path.expanduser("~/.config/openbox/lxde-rc.xml")
+else:
+    config_lxdm = '/etc/lxdm/lxdm.conf'
+    config_openbox_local = os.path.expanduser("~/.config/openbox/lxde-rc.xml")
+
+def get_lxdm_config():
     return config_lxdm
+
+def get_openbox_config():
+    return config_openbox_local
