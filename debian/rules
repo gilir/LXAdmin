@@ -3,5 +3,9 @@
 %:
 	dh $@
 
+override_dh_auto_configure:
+	gnome-autogen.sh --sysconfdir=/etc
+	dh_auto_configure -- --sysconfdir=/etc
+
 override_dh_auto_test:
 	#Don't do anything, tests didn't pass for now
