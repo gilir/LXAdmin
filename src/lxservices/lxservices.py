@@ -18,9 +18,16 @@
 #   along with this program.  If not, see <http://www.gnu.org/licenses/>. *
 #                                                                         *
 #**************************************************************************
-import locale
-locale.setlocale(locale.LC_ALL, '')          #set locale from 'LANG'
-Xcodec=locale.getpreferredencoding(False)
+import lxadmin.defs as defs
+
+import gettext
+
+gettext.bindtextdomain('lxadmin', defs.LOCALE_DIR)
+gettext.textdomain('lxadmin')
+_ = gettext.gettext
+
+from gettext import gettext as _
+
 import os
 import sys
 import string
@@ -30,8 +37,6 @@ import pygtk
 pygtk.require('2.0')
 import gtk
 import pango
-
-from gettext import gettext as _
 
 rot=[
 "16 16 4 1",
@@ -124,37 +129,6 @@ DefaultIcon=[
 "       ...      ",
 "                ",
 "                "]
-
-
-I18N={}
-
-def i18n(text):
-    if I18N_ready:
-       if I18N.has_key(text): return I18N[text]
-       else: return text
-    else: return text
-
-def load_i18n(filename):
-     ready=False
-     lang=os.getenv('LANG')
-     if not lang: return ready
-     lang2='/usr/share/locale/'+lang[0:2] +'/LC_MESSAGES/'+filename
-     lang3='/usr/share/locale/'+lang[0:5] +'/LC_MESSAGES/'+filename
-     lang='no file'
-     if   os.access(lang3,os.R_OK): lang=lang3
-     elif os.access(lang2,os.R_OK): lang=lang2
-     if lang != 'no file':
-        f=codecs.open(lang,'r','utf_8')
-        if f:
-           lang=f.readlines()
-           f.close()
-           ready=True
-           for z in lang:
-               s=z.replace('\n','').split('=')
-               if s[0]=='': continue
-               I18N[s[0]]=s[1]
-     return ready
-
 
 runlevel=[]
 def get_runlevel(pathname):
@@ -300,14 +274,8 @@ class startmenu:
 # If the program is run directly or passed as an argument to the python
 # interpreter then create a HelloWorld instance and show it
 if __name__ == "__main__":
-     codec1=Xcodec.lower().replace('iso-','iso').replace('-','_')
-     if 'ansi' in codec1: codec1='iso8859_1'  #Ansi is shit...
-     if os.getenv('UTF8_FILENAMES','0')=='1': codec1='utf_8'
-     I18N_ready = load_i18n('services.py.moo')
      Soff=gtk.gdk.pixbuf_new_from_xpm_data(rot)
      Son2=gtk.gdk.pixbuf_new_from_xpm_data(gelb)
      Son =gtk.gdk.pixbuf_new_from_xpm_data(gruen)
      app=startmenu()
      app.main() 
-
-
