@@ -20,6 +20,7 @@
 #**************************************************************************
 
 import lxadmin.defs as defs
+import lxadmin.detect_os as detect_os 
 
 import gettext
 
@@ -40,7 +41,7 @@ import pango
 
 control_center_icons=[
 ["name","icon","command"],
-[_("Login Screen"),"config-users",'su-to-root -X -c "/usr/bin/lxdmconf"'],
+[_("Login Screen"),"config-users", detect_os.get_command_su() + " /usr/bin/lxdmconf"],
 [_("Configure Openbox"),"obconf",'obconf'],
 [_("Preferred Applications"),"applications-system",'libfm-pref-apps'],
 [_("Openbox Keyboard Shortcuts"),"input-keyboard",'openbox-keyconf'],
@@ -51,7 +52,7 @@ control_center_icons=[
 [_("Appearance"),"preferences-desktop-theme",'lxappearance'],
 [_("configure Fonts"),"format-text-bold",'lxfontconfig.py'],
 [_("PCManFM Settings"),"file-manager",'pcmanfm --show-pref=1'],
-[_("PCManFM Superuser Mode"),"file-manager",'su-to-root -X -c "pcmanfm --no-desktop"'],
+[_("PCManFM Superuser Mode"),"file-manager", detect_os.get_command_su() + " pcmanfm --no-desktop"],
 [_("Refresh Panel"),"gtk-refresh",'lxpanelctl restart'],
 [_("Search Software"),"search",'apt-leo'],
 [_("Session Settings"),"gnome-window-manager",'lxsession-edit'],
