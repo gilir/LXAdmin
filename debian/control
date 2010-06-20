@@ -57,6 +57,15 @@ Depends: lxadmin (= ${binary:Version}),
 Description: utility to change keyboard layout.
  lxkeyboardconf is an utility to change keyboard layout in LXDE.
 
+Package: lxscreenshot
+Architecture: any
+Depends: lxadmin (= ${binary:Version}),
+         ${shlibs:Depends},
+         ${misc:Depends},
+         ${python:Depends}
+Description: utility to take screenshot.
+ lxkeyboardconf is an utility to take screenshot in LXDE.
+
 Package: lxcc
 Architecture: any
 Depends: lxadmin (= ${binary:Version}),
