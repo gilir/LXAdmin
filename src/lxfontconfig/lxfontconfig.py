@@ -18,9 +18,16 @@
 #   along with this program.  If not, see <http://www.gnu.org/licenses/>. *
 #                                                                         *
 #**************************************************************************
-import locale
-locale.setlocale(locale.LC_ALL, '')   #set locale from 'LANG'
-Xcodec=locale.getpreferredencoding(False)
+import lxadmin.defs as defs
+
+import gettext
+
+gettext.bindtextdomain('lxadmin', defs.LOCALE_DIR)
+gettext.textdomain('lxadmin')
+_ = gettext.gettext
+
+from gettext import gettext as _
+
 import os
 import sys
 import string
@@ -30,8 +37,6 @@ import gtk
 import codecs
 import pango
 display=gtk.gdk.display_get_default()
-
-from gettext import gettext as _
 
 
 DefaultIcon=[
@@ -116,39 +121,6 @@ ivbgr=[
 "aaaaaaaaaaaa",
 "aaaaaaaaaaaa",
 "aaaaaaaaaaaa"]
-
-
-I18N={}
-
-def i18n(text):
-    #liefert einen Internationialisierungstext zurÃ¼ck
-    if I18N_ready:
-       if I18N.has_key(text): return I18N[text]
-       else: return text
-    else: return text
-
-def load_i18n(filename):
-     #lÃ¤dt das Internationalisierung.moo file
-     ready=False
-     lang=os.getenv('LANG')
-     if not lang: return ready
-     lang2='/usr/share/locale/'+lang[0:2] +'/LC_MESSAGES/'+filename
-     lang3='/usr/share/locale/'+lang[0:5] +'/LC_MESSAGES/'+filename
-     lang='no file'
-     if   os.access(lang3,os.R_OK): lang=lang3
-     elif os.access(lang2,os.R_OK): lang=lang2
-     if lang != 'no file':
-        f=codecs.open(lang,'r','utf_8')
-        if f:
-           lang=f.readlines()
-           f.close()
-           ready=True
-           for z in lang:
-               s=z.replace('\n','').split('=')
-               if s[0]=='': continue
-               I18N[s[0]]=s[1]
-     return ready
-
 
 class Simple:
 
@@ -466,6 +438,5 @@ class Simple:
 # If the program is run directly or passed as an argument to the python
 # interpreter then create a HelloWorld instance and show it
 if __name__ == "__main__":
-     I18N_ready = load_i18n('fontconfig.py.moo')
      app = Simple()
      app.main()
