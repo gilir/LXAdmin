@@ -37,3 +37,25 @@ Depends: lxadmin (= ${binary:Version}),
          ${python:Depends}
 Description: utility to change proxy options
  lxproxy is an utility to change proxy options in LXDE.
+
+Package: lxcc
+Architecture: any
+Depends: lxadmin (= ${binary:Version}),
+         ${shlibs:Depends},
+         ${misc:Depends},
+         ${python:Depends}
+Recommends: lxdmconf,
+            obconf,
+            libfm-gtk0,
+            openbox-keyconf,
+            lxkeyboardconf,
+            lxinput,
+            pcmanfm (>= 0.9),
+            xscreensaver,
+            lxappearance,
+            lxfontconfig,
+            lxpanel,
+            lxsession-edit,
+            lxrandr
+Description: utility to start various configuration tools
+ lxcc is control center to change various options on a LXDE desktop.
