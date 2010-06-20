@@ -47,6 +47,16 @@ Depends: lxadmin (= ${binary:Version}),
 Description: utility to change font options.
  lxfontconfig is an utility to change font options in LXDE.
 
+Package: lxkeyboardconf
+Architecture: any
+Depends: lxadmin (= ${binary:Version}),
+         ${shlibs:Depends},
+         ${misc:Depends},
+         ${python:Depends},
+         lxpanel
+Description: utility to change keyboard layout.
+ lxkeyboardconf is an utility to change keyboard layout in LXDE.
+
 Package: lxcc
 Architecture: any
 Depends: lxadmin (= ${binary:Version}),
