@@ -44,7 +44,7 @@ Depends: lxadmin (= ${binary:Version}),
          ${shlibs:Depends},
          ${misc:Depends},
          ${python:Depends}
-Description: utility to change font options.
+Description: utility to change font options
  lxfontconfig is an utility to change font options in LXDE.
 
 Package: lxkeyboardconf
@@ -54,7 +54,7 @@ Depends: lxadmin (= ${binary:Version}),
          ${misc:Depends},
          ${python:Depends},
          lxpanel
-Description: utility to change keyboard layout.
+Description: utility to change keyboard layout
  lxkeyboardconf is an utility to change keyboard layout in LXDE.
 
 Package: lxscreenshot
@@ -63,7 +63,7 @@ Depends: lxadmin (= ${binary:Version}),
          ${shlibs:Depends},
          ${misc:Depends},
          ${python:Depends}
-Description: utility to take screenshot.
+Description: utility to take screenshot
  lxscreenshot is an utility to take screenshot in LXDE.
 
 Package: lxservices
@@ -72,7 +72,7 @@ Depends: lxadmin (= ${binary:Version}),
          ${shlibs:Depends},
          ${misc:Depends},
          ${python:Depends}
-Description: utility to manage services.
+Description: utility to manage services
  lxservices is an utility to manage services in LXDE.
 
 Package: openbox-keyconf
@@ -81,7 +81,7 @@ Depends: lxadmin (= ${binary:Version}),
          ${shlibs:Depends},
          ${misc:Depends},
          ${python:Depends}
-Description: utility to change openbox keyboard configuration.
+Description: utility to change openbox keyboard configuration
  openbox-keyconf is an utility change openbox keyboard configuration in LXDE.
 
 Package: lxcc
