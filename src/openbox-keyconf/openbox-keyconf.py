@@ -77,6 +77,7 @@ KP_Right  = [6] [cursor right]
 for more keycodes start "xev" in a terminal"""
 
 import lxadmin.defs as defs
+import lxadmin.detect_os as detect_os
 
 import gettext
 
@@ -98,7 +99,7 @@ import pango
 import gobject
 import gc
 
-configfile=".config/openbox/lxde-rc.xml"
+configfile=detect_os.get_openbox_config():
 mybuffer=None
 helpwindow=None
 
@@ -186,7 +187,7 @@ class Tool:
 
     def save(self,data=None):
         #Apply button is clicked
-        filename=home+'/'+configfile
+        filename=configfile
         text=''
         try:
            f=codecs.open(filename,'r','utf_8')
@@ -431,7 +432,7 @@ class Tool:
         sw.set_shadow_type(gtk.SHADOW_ETCHED_IN)
         sw.set_policy(gtk.POLICY_AUTOMATIC, gtk.POLICY_AUTOMATIC)
         sw.add(self.treeview)
-        filename=home+'/'+configfile
+        filename=configfile
         self.count_list=0
         try:
            f=codecs.open(filename,'r','utf_8')
