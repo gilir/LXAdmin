@@ -64,7 +64,7 @@ Depends: lxadmin (= ${binary:Version}),
          ${misc:Depends},
          ${python:Depends}
 Description: utility to take screenshot.
- lxkeyboardconf is an utility to take screenshot in LXDE.
+ lxscreenshot is an utility to take screenshot in LXDE.
 
 Package: lxservices
 Architecture: any
