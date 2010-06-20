@@ -9,6 +9,8 @@ AM_INIT_AUTOMAKE([-Wall -Werror foreign])
 AC_CONFIG_MACRO_DIR([m4])
 AC_SUBST(ACLOCAL_AMFLAGS, "$ACLOCAL_FLAGS -I m4")
 
+m4_pattern_allow([^AS_]) 
+
 AC_CONFIG_HEADERS([config.h])
 
 # Checks for programs.

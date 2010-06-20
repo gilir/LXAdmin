@@ -57,4 +57,5 @@ po/POTFILES
 po/stamp-it
 src/xml-purge
 src/xml_purge-xml-purge.o
+src/common/defs.py
 mkinstalldirs
