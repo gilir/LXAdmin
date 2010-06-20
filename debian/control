@@ -75,6 +75,15 @@ Depends: lxadmin (= ${binary:Version}),
 Description: utility to manage services.
  lxservices is an utility to manage services in LXDE.
 
+Package: openbox-keyconf
+Architecture: any
+Depends: lxadmin (= ${binary:Version}),
+         ${shlibs:Depends},
+         ${misc:Depends},
+         ${python:Depends}
+Description: utility to change openbox keyboard configuration.
+ openbox-keyconf is an utility change openbox keyboard configuration in LXDE.
+
 Package: lxcc
 Architecture: any
 Depends: lxadmin (= ${binary:Version}),
