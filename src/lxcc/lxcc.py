@@ -54,10 +54,11 @@ control_center_icons=[
 [_("PCManFM Settings"),"file-manager",'pcmanfm --show-pref=1'],
 [_("PCManFM Superuser Mode"),"file-manager", detect_os.get_command_su() + " pcmanfm --no-desktop"],
 [_("Refresh Panel"),"gtk-refresh",'lxpanelctl restart'],
-[_("Search Software"),"search",'apt-leo'],
+[_("Search Software"),"search", detect_os.get_search_software()],
 [_("Session Settings"),"gnome-window-manager",'lxsession-edit'],
 [_("Monitor Settings"),"computer",'lxrandr'],
 ]
+#TODO Let's the user define it's own progams
 
 class Simple:
 
