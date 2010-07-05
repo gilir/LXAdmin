@@ -50,7 +50,7 @@ control_center_icons=[
 [_("Set Wallpaper"),"desktop",'pcmanfm --desktop-pref'],
 [_("Screensaver Settings"),"xscreensaver",'xscreensaver-demo'],
 [_("Appearance"),"preferences-desktop-theme",'lxappearance'],
-[_("configure Fonts"),"format-text-bold",'lxfontconfig.py'],
+[_("configure Fonts"),"format-text-bold",'lxfontconfig'],
 [_("PCManFM Settings"),"file-manager",'pcmanfm --show-pref=1'],
 [_("PCManFM Superuser Mode"),"file-manager", detect_os.get_command_su() + " pcmanfm --no-desktop"],
 [_("Refresh Panel"),"gtk-refresh",'lxpanelctl restart'],
