@@ -34,14 +34,17 @@ if os_detection[0] == 'Ubuntu':
         config_lxdm = '/etc/xdg/lubuntu/lxdm/lxdm.conf'
         config_openbox_local = os.path.expanduser("~/.config/openbox/lubuntu-rc.xml")
         command_su = "gksu"
+        search_software = "gksu synaptic"
     else:
         config_lxdm = '/etc/xdg/lxdm/default.conf'
         config_openbox_local = os.path.expanduser("~/.config/openbox/lxde-rc.xml")
         command_su = "gksu"
+        search_software = "gksu synaptic"
 else:
     config_lxdm = '/etc/lxdm/lxdm.conf'
     config_openbox_local = os.path.expanduser("~/.config/openbox/lxde-rc.xml")
     command_su = "su-to-root -X -c"
+    search_software = "apt-leo"
 
 def get_lxdm_config():
     return config_lxdm
@@ -51,3 +54,6 @@ def get_openbox_config():
 
 def get_command_su():
     return command_su
+
+def get_search_software():
+    return search_software
