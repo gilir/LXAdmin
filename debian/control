@@ -23,7 +23,7 @@ Description: common files for lxadmin utilities
 
 Package: lxdmconf
 Architecture: all
-Depends: lxadmin (= ${binary:Version}),
+Depends: lxadmin-common (= ${binary:Version}),
          ${shlibs:Depends},
          ${misc:Depends},
          ${python:Depends},
@@ -32,7 +32,7 @@ Description: utility to change lxdm options
  
 Package: lxproxy
 Architecture: all
-Depends: lxadmin (= ${binary:Version}),
+Depends: lxadmin-common (= ${binary:Version}),
          ${shlibs:Depends},
          ${misc:Depends},
          ${python:Depends}
@@ -41,7 +41,7 @@ Description: utility to change proxy options
 
 Package: lxfontconfig
 Architecture: all
-Depends: lxadmin (= ${binary:Version}),
+Depends: lxadmin-common (= ${binary:Version}),
          ${shlibs:Depends},
          ${misc:Depends},
          ${python:Depends}
@@ -50,7 +50,7 @@ Description: utility to change font options
 
 Package: lxkeyboardconf
 Architecture: all
-Depends: lxadmin (= ${binary:Version}),
+Depends: lxadmin-common (= ${binary:Version}),
          ${shlibs:Depends},
          ${misc:Depends},
          ${python:Depends},
@@ -60,7 +60,7 @@ Description: utility to change keyboard layout
 
 Package: lxscreenshot
 Architecture: all
-Depends: lxadmin (= ${binary:Version}),
+Depends: lxadmin-common (= ${binary:Version}),
          ${shlibs:Depends},
          ${misc:Depends},
          ${python:Depends}
@@ -69,7 +69,7 @@ Description: utility to take screenshot
 
 Package: lxservices
 Architecture: all
-Depends: lxadmin (= ${binary:Version}),
+Depends: lxadmin-common (= ${binary:Version}),
          ${shlibs:Depends},
          ${misc:Depends},
          ${python:Depends}
@@ -78,7 +78,7 @@ Description: utility to manage services
 
 Package: openbox-keyconf
 Architecture: all
-Depends: lxadmin (= ${binary:Version}),
+Depends: lxadmin-common (= ${binary:Version}),
          ${shlibs:Depends},
          ${misc:Depends},
          ${python:Depends}
@@ -87,7 +87,7 @@ Description: utility to change openbox keyboard configuration
 
 Package: lxcc
 Architecture: all
-Depends: lxadmin (= ${binary:Version}),
+Depends: lxadmin-common (= ${binary:Version}),
          ${shlibs:Depends},
          ${misc:Depends},
          ${python:Depends}
