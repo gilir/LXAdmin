@@ -18,6 +18,8 @@ Architecture: all
 Depends: ${shlibs:Depends},
          ${misc:Depends},
          ${python:Depends}
+Replaces: lxadmin (<= 0.0.1+bzr88)
+Breaks: lxadmin (<= 0.0.1+bzr88)
 Description: common files for lxadmin utilities
  lxadmin are common files for lxadmin utilities.
 
