@@ -89,6 +89,8 @@ from gettext import gettext as _
 
 import os
 import sys
+import shutil
+import tempfile
 import time
 import string
 import codecs
@@ -206,7 +208,7 @@ class Tool:
                else: print a,b
         gc.collect()
 
-        f=codecs.open(filename,'w','utf_8')
+        f = tempfile.NamedTemporaryFile()
         found=False
         cutting=False 
         for line in config:
@@ -264,6 +266,7 @@ class Tool:
                   cutting=True
                   continue
             f.write(line+'\n')
+        shutil.copyfile(f.name, filename)
         f.flush()
         f.close()
         os.system('openbox --reconfigure')
